@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
+</head>
+<body ng-app="helloProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Hello</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<section ng-controller="helloCtrl" layout="column" layout-padding>
+    <md-content class="md-no-momentum">
+        <h3>AngularJS Material Proof - Hello</h3>
+        <fieldset>
+            <legend>personal data</legend>
+            <img src="/img/icons/ic_person_24px.svg"/>
+            <md-input-container class="md-icon-float md-block">
+                <label for="name">name: </label>
+                <input type="text" id="name" ng-model="user.name"/>
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block">
+                <label for="surname">surname: </label>
+                <input type="text" id="surname" ng-model="user.surname"/>
+            </md-input-container>
+        </fieldset>
+    </md-content>
+    <md-content class="md-no-momentum">
+        <p ng-if="user.name && user.surname">
+            {{hello()}}
+        </p>
+    </md-content>
+</section>
+
+<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
+<script type="text/javascript" src="/js/hello.js"></script>
+</body>
+</html>
