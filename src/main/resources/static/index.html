@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
+</head>
+<body ng-app="indexProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Index</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="AppCtrl" layout="column">
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">List of pages to try</h1>
+            </md-toolbar>
+            <md-content layout-margin="">
+                <ul>
+                    <li><a href="/hello">hello</a></li>
+                </ul>
+                <md-button ng-click="toggleLeft()" class="md-accent">
+                    hide this
+                </md-button>
+            </md-content>
+        </md-sidenav>
+        <md-content flex layout-padding>
+            <div layout="column" layout-align="top center">
+                <h3>AngularJS Material Proof - Index</h3>
+                <p>
+                    Example of a page with a list of retractable links on the left side.
+                </p>
+                <div>
+                    <md-button ng-click="toggleLeft()" class="md-raised">
+                        get side nav bar
+                    </md-button>
+                </div>
+            </div>
+        </md-content>
+    </section>
+</div>
+
+<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
