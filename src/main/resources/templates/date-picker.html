@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Date Picker</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
+    <link rel="stylesheet" media="all" href="/css/date-picker.css">
+</head>
+<body ng-app="datePickerProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Date Picker</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="datePickerCtrl as ctrl">
+    <section>
+        <form>
+            <fieldset>
+                <legend>standard</legend>
+                <md-content layout-padding>
+                    <div flex-gt-xs>
+                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+                    </div>
+                </md-content>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>tabbing the focus on the input to open the calendar</legend>
+                <md-content layout-padding>
+                    <div flex-gt-xs>
+                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                    </div>
+                </md-content>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>open the calendar that goes straight to the year view</legend>
+                <md-content layout-padding>
+                    <div flex-gt-xs>
+                        <md-datepicker ng-model="ctrl.myDate" md-current-view="year" md-placeholder="Enter date"></md-datepicker>
+                    </div>
+                </md-content>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>open the calendar that only allows for the month to be selected</legend>
+                <md-content layout-padding>
+                    <div flex-gt-xs>
+                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-mode="month"></md-datepicker>
+                    </div>
+                </md-content>
+            </fieldset>
+        </form>
+    </section>
+</div>
+
+<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
+<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
+<script type="text/javascript" src="/js/date-picker.js"></script>
+</body>
+</html>
