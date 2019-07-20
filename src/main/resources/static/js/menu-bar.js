@@ -22,7 +22,7 @@ angular.module('menuBarApp', ['ngMaterial'])
             showSpellingSuggestions: true,
             presentationMode: 'edit'
         };
-        this.sampleAction = function(name, ev) {
+        this.proofAction = function(name, ev) {
             $mdDialog.show($mdDialog.alert()
                 .title(name)
                 .textContent('You triggered the "' + name + '" action')
