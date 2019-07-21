@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>fab toolbar</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/fab-toolbar.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="fabToolbarProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary">
+                <a href="/">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+                </a>
+            </md-button>
+            <h2 flex md-truncate>fab toolbar</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="fabToolbarCtrl as ctrl">
+    <md-toolbar>
+        <md-fab-actions class="md-toolbar-tools">
+            <md-button aria-label="comment" class="md-icon-button">
+                <md-icon md-svg-src="/img/icons/ic_comment.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="label" class="md-icon-button">
+                <md-icon md-svg-src="/img/icons/ic_label.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="photo" class="md-icon-button">
+                <md-icon md-svg-src="/img/icons/ic_photo.svg"></md-icon>
+            </md-button>
+        </md-fab-actions>
+    </md-toolbar>
+    </md-fab-toolbar>
+    <md-content class="md-padding" layout="column">
+        <div layout="row" layout-align="space-around">
+            <div layout="column">
+                <em>to do</em>
+            </div>
+            <div layout="column">
+                <em>to do</em>
+            </div>
+            <div layout="column">
+                <em>to do</em>
+                <!--TODO-->
+            </div>
+        </div>
+    </md-content>
+    <md-fab-toolbar count="proof.count" md-direction="{{proof.selectedDirection}}" md-open="proof.isOpen">
+        <md-fab-trigger class="align-with-text">
+            <md-button aria-label="add" class="md-fab md-primary">
+                <md-icon md-svg-src="/img/icons/ic_add_circle_outline.svg"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+    </md-fab-toolbar>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/fab-toolbar.js" type="text/javascript"></script>
+</body>
+</html>
