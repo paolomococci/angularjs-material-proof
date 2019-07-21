@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menu Bar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>menu bar</title>
     <meta content="" name="description"/>
     <meta content="Paolo Mococci" name="author"/>
-    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
-    <link rel="stylesheet" media="all" href="/css/menu-bar.css">
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/menu-bar.css" media="all" rel="stylesheet">
 </head>
 <body ng-app="menuBarApp" ng-cloak>
 
 <div>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            <h2 flex md-truncate>Menu Bar</h2>
+            <md-button aria-label="home" class="md-fab md-primary">
+                <a href="/">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+                </a>
+            </md-button>
+            <h2 flex md-truncate>menu bar</h2>
         </div>
     </md-toolbar>
 </div>
@@ -143,36 +148,36 @@
                             View
                         </button>
                         <md-menu-content>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.printLayout">Print layout
+                            <md-menu-item ng-model="ctrl.settings.printLayout" type="checkbox">Print layout
                             </md-menu-item>
                             <md-menu-item class="md-indent">
                                 <md-menu>
                                     <md-button ng-click="$mdMenu.open()">Mode</md-button>
                                     <md-menu-content width="3">
-                                        <md-menu-item type="radio" ng-model="ctrl.settings.presentationMode"
+                                        <md-menu-item ng-model="ctrl.settings.presentationMode" type="radio"
                                                       value="'presentation'">Presentation
                                         </md-menu-item>
-                                        <md-menu-item type="radio" ng-model="ctrl.settings.presentationMode"
+                                        <md-menu-item ng-model="ctrl.settings.presentationMode" type="radio"
                                                       value="'edit'">Edit
                                         </md-menu-item>
-                                        <md-menu-item type="radio" ng-model="ctrl.settings.presentationMode"
+                                        <md-menu-item ng-model="ctrl.settings.presentationMode" type="radio"
                                                       value="'modifiable'">Modifiable
                                         </md-menu-item>
                                     </md-menu-content>
                                 </md-menu>
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.showRuler">Show ruler</md-menu-item>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.showEquationToolbar">Show equation
+                            <md-menu-item ng-model="ctrl.settings.showRuler" type="checkbox">Show ruler</md-menu-item>
+                            <md-menu-item ng-model="ctrl.settings.showEquationToolbar" type="checkbox">Show equation
                                 toolbar
                             </md-menu-item>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.showSpellingSuggestions">Show spelling
+                            <md-menu-item ng-model="ctrl.settings.showSpellingSuggestions" type="checkbox">Show spelling
                                 suggestions
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.compactControls">Compact controls
+                            <md-menu-item ng-model="ctrl.settings.compactControls" type="checkbox">Compact controls
                             </md-menu-item>
-                            <md-menu-item type="checkbox" ng-model="ctrl.settings.fullScreen">Full screen</md-menu-item>
+                            <md-menu-item ng-model="ctrl.settings.fullScreen" type="checkbox">Full screen</md-menu-item>
                         </md-menu-content>
                     </md-menu>
                     <md-menu>
@@ -243,11 +248,11 @@
     </md-content>
 </div>
 
-<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
-<script type="text/javascript" src="/js/menu-bar.js"></script>
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/menu-bar.js" type="text/javascript"></script>
 </body>
 </html>
