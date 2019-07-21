@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('autocompleteProof', ['ngMaterial', 'ngMessages']).controller('AppCtrl', AppCtrl);
+    angular.module('autocompleteProof', ['ngMaterial', 'ngMessages']).controller('autocompleteCtrl', AppCtrl);
 
     function AppCtrl ($timeout, $q) {
         var self = this;
