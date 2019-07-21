@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>bottom sheet</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/bottom-sheet.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="bottomSheetProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>bottom sheet</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="bottomSheetCtrl as ctrl">
+    <md-content layout-padding>
+
+    </md-content>
+    <div class="bottom-sheet-demo inset" layout="row" layout-align="center" layout-sm="column" >
+        <md-button class="md-primary md-raised" flex="50" ng-click="showListBottomSheet()">show like list</md-button>
+        <md-button class="md-primary md-raised" flex="50" ng-click="showGridBottomSheet()">show like grid</md-button>
+    </div>
+    <div ng-if="alert">
+        <br/>
+        <em class="md-padding" layout="row" layout-align="center center">
+            {{alert}}
+        </em>
+    </div>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/bottom-sheet.js" type="text/javascript"></script>
+</body>
+</html>
