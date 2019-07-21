@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Date Picker</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>date picker</title>
     <meta content="" name="description"/>
     <meta content="Paolo Mococci" name="author"/>
-    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
-    <link rel="stylesheet" media="all" href="/css/date-picker.css">
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/date-picker.css" media="all" rel="stylesheet">
 </head>
 <body ng-app="datePickerProof" ng-cloak>
 
 <div>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            <h2 flex md-truncate>Date Picker</h2>
+            <md-button aria-label="home" class="md-fab md-primary">
+                <a href="/">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+                </a>
+            </md-button>
+            <h2 flex md-truncate>date picker</h2>
         </div>
     </md-toolbar>
 </div>
@@ -26,7 +31,7 @@
                 <legend>standard</legend>
                 <md-content layout-padding>
                     <div flex-gt-xs>
-                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+                        <md-datepicker md-placeholder="Enter date" ng-model="ctrl.myDate"></md-datepicker>
                     </div>
                 </md-content>
             </fieldset>
@@ -38,7 +43,7 @@
                 <legend>tabbing the focus on the input to open the calendar</legend>
                 <md-content layout-padding>
                     <div flex-gt-xs>
-                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                        <md-datepicker md-open-on-focus md-placeholder="Enter date" ng-model="ctrl.myDate"></md-datepicker>
                     </div>
                 </md-content>
             </fieldset>
@@ -50,7 +55,7 @@
                 <legend>open the calendar that goes straight to the year view</legend>
                 <md-content layout-padding>
                     <div flex-gt-xs>
-                        <md-datepicker ng-model="ctrl.myDate" md-current-view="year" md-placeholder="Enter date"></md-datepicker>
+                        <md-datepicker md-current-view="year" md-placeholder="Enter date" ng-model="ctrl.myDate"></md-datepicker>
                     </div>
                 </md-content>
             </fieldset>
@@ -62,7 +67,7 @@
                 <legend>open the calendar that only allows for the month to be selected</legend>
                 <md-content layout-padding>
                     <div flex-gt-xs>
-                        <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-mode="month"></md-datepicker>
+                        <md-datepicker md-mode="month" md-placeholder="Enter date" ng-model="ctrl.myDate"></md-datepicker>
                     </div>
                 </md-content>
             </fieldset>
@@ -70,11 +75,11 @@
     </section>
 </div>
 
-<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
-<script type="text/javascript" src="/js/date-picker.js"></script>
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/date-picker.js" type="text/javascript"></script>
 </body>
 </html>
