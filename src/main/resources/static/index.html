@@ -2,37 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>index</title>
     <meta content="" name="description"/>
     <meta content="Paolo Mococci" name="author"/>
-    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
 </head>
 <body ng-app="indexProof" ng-cloak>
 
 <div>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            <h2 flex md-truncate>Index</h2>
+            <md-button aria-label="home" class="md-fab md-primary">
+                <a href="#">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+                </a>
+            </md-button>
+            <h2 flex md-truncate>index</h2>
         </div>
     </md-toolbar>
 </div>
 
-<div ng-controller="AppCtrl" layout="column">
-    <section layout="row" flex>
+<div layout="column" ng-controller="AppCtrl">
+    <section flex layout="row">
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
             <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">List of pages to try</h1>
+                <h1 class="md-toolbar-tools">list of pages to try</h1>
             </md-toolbar>
             <md-content layout-margin="">
                 <ul>
                     <li><a href="/autocomplete">autocomplete</a></li>
                     <li><a href="/date-picker">date-picker</a></li>
                     <li><a href="/date-picker-range">date-picker-range</a></li>
+                    <li><a href="/fab-toolbar">fab-toolbar</a></li>
                     <li><a href="/hello">hello</a></li>
                     <li><a href="/menu-bar">menu bar</a></li>
                 </ul>
-                <md-button ng-click="toggleLeft()" class="md-accent">
+                <md-button class="md-accent" ng-click="toggleLeft()">
                     hide this
                 </md-button>
             </md-content>
@@ -41,10 +47,10 @@
             <div layout="column" layout-align="top center">
                 <h3>AngularJS Material Proof - Index</h3>
                 <p>
-                    Example of a page with a list of retractable links on the left side.
+                    example of a page with a list of retractable links on the left side
                 </p>
                 <div>
-                    <md-button ng-click="toggleLeft()" class="md-raised">
+                    <md-button class="md-raised" ng-click="toggleLeft()">
                         get side nav bar
                     </md-button>
                 </div>
@@ -53,11 +59,11 @@
     </section>
 </div>
 
-<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
-<script type="text/javascript" src="/js/index.js"></script>
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/index.js" type="text/javascript"></script>
 </body>
 </html>
