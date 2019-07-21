@@ -2,49 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Autocomplete</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>autocomplete</title>
     <meta content="" name="description"/>
     <meta content="Paolo Mococci" name="author"/>
-    <link rel="stylesheet" media="all" href="/webjars/angular-material/1.1.5/angular-material.min.css">
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
 </head>
 <body ng-app="autocompleteProof" ng-cloak>
 
 <div>
     <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-            <h2 flex md-truncate>Autocomplete</h2>
+            <md-button aria-label="home" class="md-fab md-primary">
+                <a href="/">
+                    <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+                </a>
+            </md-button>
+            <h2 flex md-truncate>autocomplete</h2>
         </div>
     </md-toolbar>
 </div>
 
-<div ng-controller="AppCtrl as ctrl" layout="column" ng-cloak>
+<div layout="column" ng-cloak ng-controller="autocompleteCtrl as ctrl">
     <md-content class="md-padding">
-        <form ng-submit="$event.preventDefault()" name="searchForm">
+        <form name="searchForm" ng-submit="$event.preventDefault()">
             <fieldset>
                 <legend>game of love, lovely name survey</legend>
-                <div layout-gt-sm="row" class="md-padding">
+                <div class="md-padding" layout-gt-sm="row">
                     <md-input-container flex>
                         <label for="floatingLabelName">your name</label>
                         <input id="floatingLabelName" type="text"/>
                     </md-input-container>
-                    <md-autocomplete flex required
-                                     md-input-name="autocompleteField"
-                                     md-input-minlength="3"
-                                     md-input-maxlength="10"
-                                     md-no-cache="ctrl.noCache"
-                                     md-selected-item="ctrl.selectedItem"
-                                     md-search-text="ctrl.searchText"
-                                     md-items="item in ctrl.querySearch(ctrl.searchText)"
-                                     md-item-text="item.display"
-                                     md-require-match=""
+                    <md-autocomplete flex input-aria-describedby="favoriteGirlFriendNameDescription"
                                      md-floating-label="ideal name of girlfriend"
-                                     input-aria-describedby="favoriteGirlFriendNameDescription">
+                                     md-input-maxlength="10"
+                                     md-input-minlength="3"
+                                     md-input-name="autocompleteField"
+                                     md-item-text="item.display"
+                                     md-items="item in ctrl.querySearch(ctrl.searchText)"
+                                     md-no-cache="ctrl.noCache"
+                                     md-require-match=""
+                                     md-search-text="ctrl.searchText"
+                                     md-selected-item="ctrl.selectedItem"
+                                     required>
                         <md-item-template>
                             <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
                         </md-item-template>
-                        <div ng-messages="searchForm.autocompleteField.$error"
-                             ng-if="searchForm.autocompleteField.$touched">
+                        <div ng-if="searchForm.autocompleteField.$touched"
+                             ng-messages="searchForm.autocompleteField.$error">
                             <div ng-message="required">You <em>must</em> have a favorite name.</div>
                             <div ng-message="md-require-match">Please select an existing name.</div>
                             <div ng-message="minlength">Your entry is not long enough.</div>
@@ -57,11 +62,11 @@
     </md-content>
 </div>
 
-<script type="text/javascript" src="/webjars/angular/1.7.7/angular.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-animate/1.7.7/angular-animate.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-aria/1.7.5/angular-aria.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-messages/1.7.5/angular-messages.min.js"></script>
-<script type="text/javascript" src="/webjars/angular-material/1.1.5/angular-material.min.js"></script>
-<script type="text/javascript" src="/js/autocomplete.js"></script>
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/autocomplete.js" type="text/javascript"></script>
 </body>
 </html>
