@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>button grid</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/button-grid.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="buttonGridProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>button grid</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="buttonGridCtrl as ctrl">
+    <md-content>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button>{{titleOne}}</md-button>
+            <md-button class="md-primary" md-no-ink>primary</md-button>
+            <md-button class="md-primary" ng-disabled="true">disabled</md-button>
+            <md-button class="md-warn">{{titleTwo}}</md-button>
+            <div class="label">flat</div>
+        </section>
+        <md-divider></md-divider>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button class="md-raised">button</md-button>
+            <md-button class="md-raised md-primary">primary</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="true">disabled</md-button>
+            <md-button class="md-raised md-warn">warn</md-button>
+            <div class="label">raised</div>
+        </section>
+        <md-divider></md-divider>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button aria-label="eat cake" class="md-fab md-mini">
+                <md-icon md-svg-src="/img/icons/ic_cake.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="use Android" class="md-fab md-mini md-primary">
+                <md-icon id="green-android" md-svg-src="/img/icons/ic_android.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="eat cake" class="md-fab">
+                <md-icon md-svg-src="/img/icons/ic_cake.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="use Android" class="md-fab md-primary">
+                <md-icon md-svg-src="/img/icons/ic_android.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="comment" class="md-fab" ng-disabled="true">
+                <md-icon md-svg-src="/img/icons/ic_comment.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="profile" class="md-fab md-primary md-hue-2">
+                <md-icon id="red-people" md-svg-src="/img/icons/ic_people.svg"></md-icon>
+            </md-button>
+            <div class="label">fab</div>
+        </section>
+        <md-divider></md-divider>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button ng-href="{{homeUrl}}" target="_blank">default link</md-button>
+            <md-button class="md-primary" ng-href="{{homeUrl}}" target="_blank">
+                primary link
+            </md-button>
+            <md-button>default button</md-button>
+            <div class="label">link and button</div>
+        </section>
+        <md-divider></md-divider>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button class="md-primary md-hue-1">primary hue one</md-button>
+            <md-button class="md-warn md-raised md-hue-2">warn hue two</md-button>
+            <md-button class="md-accent">accent</md-button>
+            <md-button class="md-accent md-raised md-hue-1">accent hue one</md-button>
+            <div class="label">themed</div>
+        </section>
+        <md-divider></md-divider>
+        <section layout="row" layout-align="center center" layout-sm="column" layout-wrap>
+            <md-button aria-label="Settings" class="md-icon-button md-primary">
+                <md-icon md-svg-icon="img/icons/ic_menu.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="Favorite" class="md-icon-button md-accent">
+                <md-icon md-svg-icon="img/icons/ic_favorite.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="More" class="md-icon-button">
+                <md-icon md-svg-icon="img/icons/ic_more_vert.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="home"
+                       class="md-icon-button launch"
+                       href="http://localhost:8080"
+                       ng-disabled="false"
+                       target="_blank"
+                       title="launch home page in new window" >
+                <md-icon md-svg-icon="img/icons/ic_launch.svg"></md-icon>
+            </md-button>
+            <div class="label">icon button</div>
+        </section>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/button-grid.js" type="text/javascript"></script>
+</body>
+</html>
