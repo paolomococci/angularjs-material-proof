@@ -23,7 +23,215 @@
 </div>
 
 <div ng-controller="cardCtrl as ctrl">
+    <md-content class="md-padding" layout="row" layout-xs="column">
 
+        <!-- left column -->
+        <div flex-gt-xs="50" flex-xs layout="column">
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-lime' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">card with image of a star</span>
+                        <span class="md-subhead">large image</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media">
+                            <img alt="star" class="md-card-image" ng-src="{{starImagePath}}">
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>move to left</md-button>
+                    <md-button>move to right</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content to do...</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-orange' : 'default' }}" md-theme-watch>
+                <md-card-header>
+                    <md-card-avatar>
+                        <md-icon class="md-avatar-icon" md-svg-icon="/img/icons/ic_people.svg"></md-icon>
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-title">void image</span>
+                        <span class="md-subhead">sample void image</span>
+                    </md-card-header-text>
+                </md-card-header>
+                <img alt="void" class="md-card-image" ng-src="{{voidImagePath}}">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">in-card actions</span>
+                        <span class="md-subhead">sample description</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                    <md-button>find</md-button>
+                    <md-button>replace</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content <em>to do</em>...</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-orange' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">card with image</span>
+                        <span class="md-subhead">extra large image</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row" layout-align="space-between">
+                    <div class="md-media-xl card-media">
+                        <img alt="square" class="md-card-image" ng-src="{{squareImagePath}}">
+                    </div>
+                    <md-card-actions layout="column">
+                        <md-button aria-label="Favorite" class="md-icon-button">
+                            <md-icon md-svg-icon="/img/icons/ic_favorite.svg"></md-icon>
+                        </md-button>
+                        <md-button aria-label="Settings" class="md-icon-button">
+                            <md-icon md-svg-icon="/img/icons/ic_menu.svg"></md-icon>
+                        </md-button>
+                        <md-button aria-label="Share" class="md-icon-button">
+                            <md-icon md-svg-icon="/img/icons/ic_share.svg"></md-icon>
+                        </md-button>
+                    </md-card-actions>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-orange' : 'default' }}" md-theme-watch>
+                <md-card-header>
+                    <md-card-avatar>
+                        <md-icon class="md-avatar-icon" md-svg-icon="/img/icons/ic_people.svg"></md-icon>
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-title">square</span>
+                        <span class="md-subhead">sample square image</span>
+                    </md-card-header-text>
+                </md-card-header>
+                <img alt="square" class="md-card-image" ng-src="{{squareImagePath}}">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">in-card actions</span>
+                        <span class="md-subhead">sample description</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                    <md-button>back</md-button>
+                    <md-button>forward</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content <em>to do</em>...</p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+
+        <!-- right column -->
+        <div flex-gt-xs="50" flex-xs layout="column">
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-orange' : 'default' }}" md-theme-watch>
+                <md-card-header>
+                    <md-card-avatar>
+                        <md-icon class="md-avatar-icon" md-svg-icon="/img/icons/ic_people.svg"></md-icon>
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-title">circle</span>
+                        <span class="md-subhead">sample circle image</span>
+                    </md-card-header-text>
+                </md-card-header>
+                <img alt="circle" class="md-card-image" ng-src="{{circleImagePath}}">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">in-card actions</span>
+                        <span class="md-subhead">sample description</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                    <md-button>align center</md-button>
+                    <md-button>align left</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content <em>to do</em>...</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-purple' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">card with image of a circle</span>
+                        <span class="md-subhead">small</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img alt="circle" class="md-card-image" ng-src="{{circleImagePath}}">
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>load</md-button>
+                    <md-button>download</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content to do...</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-red' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">card with void image</span>
+                        <span class="md-subhead">medium</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-md card-media">
+                            <img alt="void" class="md-card-image" ng-src="{{voidImagePath}}">
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>create</md-button>
+                    <md-button>read</md-button>
+                    <md-button>update</md-button>
+                    <md-button>delete</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content to do...</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card md-theme="{{ showSomeTheme ? 'some-lime' : 'default' }}" md-theme-watch>
+                <img alt="star" class="md-card-image" ng-src="{{starImagePath}}">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">in-card mixed actions</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                    <md-card-icon-actions>
+                        <md-button aria-label="Favorite" class="md-icon-button">
+                            <md-icon md-svg-icon="/img/icons/ic_favorite.svg"></md-icon>
+                        </md-button>
+                        <md-button aria-label="Share" class="md-icon-button">
+                            <md-icon md-svg-icon="/img/icons/ic_share.svg"></md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                    <md-button>create</md-button>
+                    <md-button>delete</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>card content <em>to do</em>...</p>
+                </md-card-content>
+            </md-card>
+
+            <div layout layout-align="center end" layout-padding style="height:200px">
+                <md-checkbox ng-model="showSomeTheme">use 'some' themed cards</md-checkbox>
+            </div>
+
+        </div>
+
+    </md-content>
 </div>
 
 <script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
