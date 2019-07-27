@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>checkbox</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/checkbox.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="checkboxProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>checkbox</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="checkboxCtrl as ctrl">
+    <md-content layout-padding>
+        <form>
+            <fieldset class="standard">
+                <legend>some sample</legend>
+                <div layout-gt-sm="row" layout-wrap>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="checkbox one" ng-model="data.checkboxOne">
+                            checkbox one: {{ data.checkboxOne }}
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="checkbox two" class="md-warn md-align-top-left"
+                                     flex ng-false-value="'no'" ng-model="data.checkboxTwo" ng-true-value="'yes'">
+                            checkbox two: {{ data.checkboxTwo }}
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="disabled checkbox" ng-disabled="true" ng-model="data.checkboxThree">
+                            checkbox: disabled
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="disabled checked checkbox" ng-disabled="true"
+                                     ng-init="data.checkboxFour=true" ng-model="data.checkboxFour">
+                            checkbox: disabled, checked
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="checkbox no ink" class="md-primary" md-no-ink ng-model="data.checkboxFive">
+                            checkbox: no ink
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="checkbox indeterminate" class="md-primary" md-indeterminate>
+                            checkbox: indeterminate
+                        </md-checkbox>
+                    </div>
+                    <div flex-gt-sm="50">
+                        <md-checkbox aria-label="checkbox disabled indeterminate"
+                                     class="md-primary" md-indeterminate ng-disabled="true">
+                            checkbox: disabled, indeterminate
+                        </md-checkbox>
+                    </div>
+                    <div flex="50" flex-xs>
+                        <p>check the following prime numbers</p>
+                        <md-checkbox aria-label="Select All" md-indeterminate="isIndeterminate()"
+                                     ng-checked="isChecked()" ng-click="toggleAll()">
+                            <em><b ng-if="isChecked()">Un-</b>Select All</em>
+                        </md-checkbox>
+                        <div class="select-all-checkboxes" flex="100" ng-repeat="item in items">
+                            <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+                                {{ item }}
+                            </md-checkbox>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </md-content>
+    <md-content>
+        <div class="results">
+            <h3>results</h3>
+            <p>array of ticked up prime numbers: <em>{{selected}}</em></p>
+        </div>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/checkbox.js" type="text/javascript"></script>
+</body>
+</html>
