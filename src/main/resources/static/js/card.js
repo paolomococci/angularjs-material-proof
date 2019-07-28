@@ -9,8 +9,10 @@
         })
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('some-lime').backgroundPalette('lime').dark();
-            $mdThemingProvider.theme('some-orange').backgroundPalette('orange').dark();
-            $mdThemingProvider.theme('some-purple').backgroundPalette('deep-purple').dark();
+            $mdThemingProvider.theme('some-amber').backgroundPalette('amber').dark();
+            $mdThemingProvider.theme('some-indigo').backgroundPalette('indigo').dark();
+            $mdThemingProvider.theme('some-cyan').backgroundPalette('cyan').dark();
             $mdThemingProvider.theme('some-red').backgroundPalette('red').dark();
+            $mdThemingProvider.theme('some-grey').backgroundPalette('grey').dark();
           });
 })();
