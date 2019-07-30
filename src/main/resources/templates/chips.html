@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>chips</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/chips.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="chipsProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>chips</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="chipsCtrl as ctrl">
+    <md-content class="md-padding" layout="column">
+        <h2>italian red berry native vine</h2>
+        <!-- form native vine one-->
+        <form name="nativeVineOne">
+            <fieldset>
+                <legend>this form use a custom chip template</legend>
+                <md-chips input-aria-label="native vine names" md-max-chips="5" md-removable="ctrl.removable"
+                          name="nativeVineName" ng-model="ctrl.roNativeVineNames" placeholder="enter a native vine name..."
+                          readonly="ctrl.readonly">
+                    <md-chip-template>
+                        <strong>{{ $chip }}</strong>
+                        <em>(red berry)</em>
+                    </md-chip-template>
+                </md-chips>
+                <div class="errors" ng-messages="nativeVineOne.nativeVineName.$error">
+                    <div ng-message="md-max-chips">maximum number of chips reached</div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- form native vine two -->
+        <form name="nativeVineTwo">
+            <fieldset>
+                <legend>this form use the default chip template</legend>
+                <md-chips md-removable="ctrl.removable" ng-model="ctrl.nativeVineNames" readonly="ctrl.readonly">
+                </md-chips>
+            </fieldset>
+        </form>
+        <!-- form native vine three -->
+        <form name="nativeVineThree">
+            <fieldset>
+                <legend>this form use ng-change and add-on-blur</legend>
+                <md-chips input-aria-label="Fruit names" md-add-on-blur="true" md-removable="ctrl.removable"
+                          ng-change="ctrl.onModelChange(ctrl.ngChangeNativeVineNames)" ng-model="ctrl.ngChangeNativeVineNames"
+                          readonly="ctrl.readonly">
+                </md-chips>
+            </fieldset>
+        </form>
+        <!-- form native vine four -->
+        <form name="nativeVineFour">
+            <fieldset>
+                <legend>this form make chips editable</legend>
+                <md-chips input-aria-label="native vine names" md-enable-chip-edit="true"
+                          md-removable="ctrl.removable" ng-model="ctrl.editableNativeVineNames"
+                          readonly="ctrl.readonly">
+                </md-chips>
+            </fieldset>
+        </form>
+        <!-- form native vine five to do -->
+        <div class="set-readonly">
+            <md-checkbox ng-model="ctrl.readonly">readonly</md-checkbox>
+            <br/>
+            <md-checkbox ng-model="ctrl.removable">
+                removable (<code>{{ctrl.removable === undefined ? 'undefined' : ctrl.removable}}</code>)
+            </md-checkbox>
+            <p class="md-caption">
+                <strong>note</strong>: <em>when removable is undefined, readonly automatically sets to false</em>
+            </p>
+        </div>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/chips.js" type="text/javascript"></script>
+</body>
+</html>
