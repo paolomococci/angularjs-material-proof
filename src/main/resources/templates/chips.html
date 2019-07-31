@@ -70,7 +70,17 @@
                 </md-chips>
             </fieldset>
         </form>
-        <!-- form native vine five to do -->
+        <!-- form native vine five -->
+        <form name="nativeVineFive">
+            <fieldset>
+                <legend>this form use placeholders and override hint texts</legend>
+                <md-chips delete-button-label="remove tag" delete-hint="press delete to remove tag"
+                          input-aria-label="tags" md-added-message="was created" md-removable="ctrl.removable"
+                          md-removed-message="was deleted" ng-model="ctrl.tags" placeholder="enter a tag"
+                          readonly="ctrl.readonly" secondary-placeholder="plus tag">
+                </md-chips>
+            </fieldset>
+        </form>
         <div class="set-readonly">
             <md-checkbox ng-model="ctrl.readonly">readonly</md-checkbox>
             <br/>
