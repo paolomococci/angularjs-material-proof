@@ -1,0 +1,9 @@
+div[ng-controller] {
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+md-icon {
+    width:24px;
+    height: 24px;
+}
