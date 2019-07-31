@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>content</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/content.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="contentProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>content</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="contentCtrl as ctrl" layout="column">
+    <md-toolbar class="md-info">
+        <div class="md-toolbar-tools">
+            <h2 class="md-flex">content toolbar</h2>
+            <span flex></span>
+            <md-button class="md-icon-button test-tooltip" aria-label="refresh">
+                <md-tooltip md-direction="left">refresh this content</md-tooltip>
+                <md-icon md-svg-src="/img/icons/ic_refresh.svg"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content flex layout-padding>
+        <p>To do...</p>
+        <p>To do...</p>
+        <p>To do...</p>
+        <p>To do...</p>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/content.js" type="text/javascript"></script>
+</body>
+</html>
