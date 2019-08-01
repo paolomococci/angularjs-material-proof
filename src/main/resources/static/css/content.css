@@ -7,3 +7,8 @@ md-icon {
     width:24px;
     height: 24px;
 }
+
+p {
+    text-indent: 1.5em;
+    word-spacing: 0.3em;
+}
