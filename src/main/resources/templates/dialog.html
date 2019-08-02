@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>dialog</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/dialog.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="dialogProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>dialog</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="dialogCtrl as ctrl">
+    <md-content layout-padding>
+
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/dialog.js" type="text/javascript"></script>
+</body>
+</html>
