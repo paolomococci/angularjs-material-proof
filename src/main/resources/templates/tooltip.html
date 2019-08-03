@@ -35,16 +35,74 @@
 <div ng-controller="tooltipCtrl as ctrl">
     <md-toolbar class="md-accent">
         <div class="md-toolbar-tools">
-            <h2 class="md-flex">sample toolbar</h2>
+            <h2 class="md-flex">you can modify tooltip property</h2>
             <span flex></span>
-            <md-button class="md-icon-button test-tooltip" aria-label="refresh">
+            <md-button aria-label="refresh" class="md-icon-button test-tooltip">
                 <md-tooltip md-direction="left">refresh this sample</md-tooltip>
                 <md-icon md-svg-src="/img/icons/ic_refresh.svg"></md-icon>
             </md-button>
         </div>
     </md-toolbar>
     <md-content layout-padding>
-        <p>To do...</p>
+        <div  layout="row" layout-align="space-between">
+            <form>
+                <fieldset>
+                    <legend>tooltip position form</legend>
+                    <md-radio-group ng-model="proof.tipDirection">
+                        <md-radio-button value="top">top</md-radio-button>
+                        <md-radio-button value="left">left</md-radio-button>
+                        <md-radio-button value="bottom">bottom</md-radio-button>
+                    </md-radio-group>
+                </fieldset>
+            </form>
+            <md-button class="md-fab">
+                <md-tooltip md-delay="proof.delayTooltip"
+                            md-direction="{{proof.tipDirection}}"
+                            md-visible="proof.showTooltip">
+                    insert drive file
+                </md-tooltip>
+                <md-icon md-svg-src="/img/icons/ic_insert_drive_file.svg"></md-icon>
+            </md-button>
+        </div>
+        <div layout="row" layout-align="space-between center">
+            <form>
+                <fieldset>
+                    <legend>tooltip visibility form</legend>
+                    <md-checkbox ng-model="proof.showTooltip">
+                        tooltip is visible
+                    </md-checkbox>
+                </fieldset>
+            </form>
+            <md-button aria-label="insert photos" class="md-fab">
+                <md-tooltip md-delay="proof.delayTooltip"
+                            md-direction="{{proof.tipDirection}}"
+                            md-visible="proof.showTooltip">
+                    insert photos
+                </md-tooltip>
+                <md-icon md-svg-src="/img/icons/ic_insert_photo.svg"></md-icon>
+            </md-button>
+        </div>
+        <div>
+            <div layout="row" layout-align="space-between center">
+                <form>
+                    <fieldset>
+                        <legend>tooltip delay form</legend>
+                        <md-input-container>
+                            <label>delay visibility</label>
+                            <input ng-model="proof.delayTooltip"/>
+                        </md-input-container>
+                    </fieldset>
+                </form>
+                <md-button aria-label="Menu with Tooltip Delay" class="md-fab">
+                    <md-tooltip md-delay="proof.delayTooltip"
+                                md-direction="{{proof.tipDirection}}"
+                                md-visible="proof.showTooltip">
+                        insert comment
+                    </md-tooltip>
+                    <md-icon md-svg-src="/img/icons/ic_insert_comment.svg"></md-icon>
+                </md-button>
+            </div>
+        </div>
     </md-content>
 </div>
 
