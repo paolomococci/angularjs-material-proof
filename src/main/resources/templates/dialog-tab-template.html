@@ -1,0 +1,53 @@
+<md-dialog aria-label="sample tabbed content">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>sample tabbed contents</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon aria-label="close dialog" md-svg-src="/img/icons/ic_close.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-tabs md-border-bottom md-dynamic-height>
+                <md-tab label="sample one">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">sample one</h1>
+                        <p>
+                            Sample to do...
+                        </p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="sample two">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">sample two</h1>
+                        <p>
+                            Sample to do...
+                        </p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="sample three">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">sample three</h1>
+                        <p>
+                            Sample to do...
+                        </p>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button href="/" md-autofocus target="_blank">
+                home page in new tab
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="answer('not interest')">
+                not interest
+            </md-button>
+            <md-button ng-click="answer('more interest')">
+                more interest
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
