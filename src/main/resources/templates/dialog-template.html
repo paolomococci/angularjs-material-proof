@@ -1,0 +1,41 @@
+<md-dialog aria-label="sample popup content">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>sample popup content</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon aria-label="close dialog" md-svg-src="/img/icons/ic_close.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h2>sample popup content</h2>
+                <p>
+                    To do...
+                </p>
+                <p>
+                    To do...
+                </p>
+                <p>
+                    To do...
+                </p>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button href="/" md-autofocus target="_blank">
+                home page in new tab
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="answer('not interest')">
+                not interest
+            </md-button>
+            <md-button ng-click="answer('more interest')">
+                more interest
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
