@@ -1,1 +1,15 @@
+#popupDialogContainer {
+    position: relative;
+}
 
+button {
+    width: 250px;
+}
+
+div#status {
+    color: #fa3;
+}
+
+md-checkbox {
+    margin-bottom: 20;
+}
