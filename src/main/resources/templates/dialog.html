@@ -22,9 +22,45 @@
     </md-toolbar>
 </div>
 
-<div ng-controller="dialogCtrl as ctrl">
+<div class="md-padding" id="popupDialogContainer" ng-controller="dialogCtrl as ctrl">
     <md-content layout-padding>
-
+        <div class="dialog-demo-content" layout="row" layout-align="center" layout-margin layout-wrap>
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)">alert dialog</md-button>
+            <md-button class="md-primary md-raised" ng-click="showConfirm($event)">confirm dialog</md-button>
+            <md-button class="md-primary md-raised" ng-click="showPrompt($event)">prompt dialog</md-button>
+            <md-button class="md-primary md-raised" ng-click="showPopupDialog($event)">popup dialog</md-button>
+            <md-button class="md-primary md-raised" ng-click="showTabbedPopupDialog($event)">tabbed popup dialog</md-button>
+            <md-button class="md-primary md-raised" ng-click="showPreRenderedDialog($event)" ng-if="listPreRenderedButton">
+                pre-rendered dialog
+            </md-button>
+        </div>
+        <div id="status" ng-if="status">
+            <b class="md-padding" layout="row" layout-align="center center">
+                {{ status }}
+            </b>
+        </div>
+        <!-- pre-rendered dialog form -->
+        <form>
+            <fieldset>
+                <legend>sample preference checkbox</legend>
+                <md-checkbox aria-label="pre-rendered dialog"
+                             ng-model="listPreRenderedButton">
+                    show pre-rendered dialog
+                </md-checkbox>
+            </fieldset>
+        </form>
+        <!-- pre-rendered dialog -->
+        <div style="visibility: hidden">
+            <div class="md-dialog-container" id="preRenderedDialog">
+                <md-dialog layout-padding>
+                    <h2>pre-rendered popup dialog</h2>
+                    <h4>this is a sample of <em>pre-rendered</em> dialog</h4>
+                    <p>
+                        this dialog is a static element in the DOM just visually <em>hidden</em>
+                    </p>
+                </md-dialog>
+            </div>
+        </div>
     </md-content>
 </div>
 
