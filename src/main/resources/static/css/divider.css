@@ -1,0 +1,7 @@
+p {
+    text-indent: 0.2em;
+}
+
+p > em {
+    background-color: #ffc;
+}
