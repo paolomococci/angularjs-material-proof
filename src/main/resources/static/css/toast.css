@@ -1,1 +1,13 @@
+md-content > h2 {
+    text-indent: 10px;
+    font-family: cursive;
+}
 
+p {
+    text-indent: 15px;
+}
+
+p:first-letter {
+    font-size: 1.4em;
+    background-color: #eee;
+}
