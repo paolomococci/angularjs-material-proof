@@ -23,9 +23,16 @@
 </div>
 
 <div ng-controller="toastCtrl as ctrl">
-    <md-content layout-padding>
-
+    <md-content class="inset" layout="column" layout-fill>
+        <h2>Toast</h2>
+        <p>Sample content to do...</p>
     </md-content>
+    <div layout="row">
+        <md-button class="md-accent md-fab md-fab-bottom-right"
+                   ng-click="ctrl.showToast()">
+            <md-icon md-svg-src="/img/icons/ic_android.svg"></md-icon>
+        </md-button>
+    </div>
 </div>
 
 <script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
