@@ -11,3 +11,9 @@ p:first-letter {
     font-size: 1.4em;
     background-color: #eee;
 }
+
+md-toast {
+    left: 0;
+    right: 0;
+    font-family: sans;
+}
