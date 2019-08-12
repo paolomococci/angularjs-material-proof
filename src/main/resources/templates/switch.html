@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>switch</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/switch.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="switchProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>switch</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="switchCtrl as ctrl">
+    <md-content class="sample">
+        <div id="sample-gray">
+            <form>
+                <fieldset>
+                    <legend>example of seven switches</legend>
+                    <md-switch aria-label="switch one" ng-model="data.switchOne">
+                        one
+                    </md-switch>
+                    <md-switch aria-label="switch two" class="md-warn"
+                               ng-false-value="'DOWN'" ng-model="data.switchTwo" ng-true-value="'UP'">
+                        two
+                    </md-switch>
+                    <md-switch aria-label="switch three" ng-disabled="data.switchSeven"
+                               ng-model="data.switchThree">
+                        three (disabled, default false)
+                    </md-switch>
+                    <md-switch aria-label="switch four" ng-disabled="data.switchSeven"
+                               ng-model="data.switchFour">
+                        four (disabled, default true)
+                    </md-switch>
+                    <md-switch aria-label="switch no-ink" class="md-primary" md-no-ink
+                               ng-model="data.switchFive">
+                        five
+                    </md-switch>
+                    <md-switch aria-label="switch six"
+                               ng-change="switchSixStateOnChange(data.switchSix)"
+                               ng-model="data.switchSix">
+                        sixth
+                    </md-switch>
+                    <md-switch aria-label="switch seven" md-invert
+                               ng-model="data.switchSeven">
+                        seven (enables or disables switches three and four)
+                    </md-switch>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <p><code>state of first switch: <em>{{data.switchOne}}</em></code><br/>
+            <p><code>state of second switch: <em>{{data.switchTwo}}</em></code><br/>
+            <p><code>state of third switch: <em>{{data.switchThree}}</em></code><br/>
+            <p><code>state of fourth switch: <em>{{data.switchFour}}</em></code><br/>
+            <p><code>state of fifth switch: <em>{{data.switchFive}}</em></code><br/>
+            <p><code>state of sixth switch: <em>{{sixState}}</em></code><br/>
+            <p><code>state of seventh switch: <em>{{data.switchSeven}}</em></code></p>
+        </div>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.7/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/switch.js" type="text/javascript"></script>
+</body>
+</html>
