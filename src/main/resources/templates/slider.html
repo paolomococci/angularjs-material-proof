@@ -24,7 +24,70 @@
 
 <div ng-controller="sliderCtrl as ctrl">
     <md-content layout-padding>
-
+        <form>
+            <fieldset>
+                <legend>examples of input slides</legend>
+                <div layout="row">
+                    <div flex layout="column" layout-align="center center">
+                        <md-slider-container ng-disabled="highReadonly">
+                            <md-slider aria-label="high"
+                                       class="md-primary"
+                                       id="high-slider"
+                                       max="100"
+                                       md-discrete md-vertical
+                                       min="0"
+                                       ng-model="percentageValues.high"
+                                       ng-readonly="highReadonly"
+                                       step="1"></md-slider>
+                            <h4>high</h4>
+                        </md-slider-container>
+                        <md-checkbox ng-model="highReadonly">read only</md-checkbox>
+                    </div>
+                    <div flex layout="column" layout-align="center center">
+                        <md-slider-container ng-disabled="mediumReadonly">
+                            <md-slider aria-label="medium"
+                                       class="md-primary"
+                                       id="medium-slider"
+                                       max="100"
+                                       md-discrete md-vertical
+                                       min="0"
+                                       ng-model="percentageValues.medium"
+                                       ng-readonly="mediumReadonly"
+                                       step="1"></md-slider>
+                            <h4>medium</h4>
+                        </md-slider-container>
+                        <md-checkbox ng-model="mediumReadonly">read only</md-checkbox>
+                    </div>
+                    <div flex layout="column" layout-align="center center">
+                        <md-slider-container ng-disabled="bassReadonly">
+                            <md-slider aria-label="bass"
+                                       class="md-primary"
+                                       id="bass-slider"
+                                       max="100"
+                                       md-discrete md-vertical
+                                       min="0"
+                                       ng-model="percentageValues.bass"
+                                       ng-readonly="bassReadonly"
+                                       step="1"></md-slider>
+                            <h4>bass</h4>
+                        </md-slider-container>
+                        <md-checkbox ng-model="bassReadonly">read only</md-checkbox>
+                    </div>
+                    <div flex layout="column" layout-align="center center">
+                        <md-slider-container ng-disabled="volumeReadonly">
+                            <md-slider aria-label="volume"
+                                       flex id="volume-slider"
+                                       md-discrete md-vertical
+                                       ng-model="percentageValues.volume"
+                                       ng-readonly="volumeReadonly"
+                                       step="1"></md-slider>
+                            <h3>volume</h3>
+                        </md-slider-container>
+                        <md-checkbox ng-model="volumeReadonly">read only</md-checkbox>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </md-content>
 </div>
 
