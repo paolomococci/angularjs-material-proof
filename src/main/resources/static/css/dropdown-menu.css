@@ -1,1 +1,17 @@
+.menu-root {
+	padding: 30px;
+	min-height:350px;
+}
 
+.menu-container {
+	min-height: 300px;
+}
+
+.menu-explain {
+    min-height:70px;
+}
+
+.menu-list {
+    min-height:100px;
+    background-color: #ebf5fc;
+}
