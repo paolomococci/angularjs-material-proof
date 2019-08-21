@@ -30,5 +30,28 @@
                     "</section>" +
                     "</article>"
             }
+        })
+        .directive('pmPerson', function() {
+            return {
+                restrict: 'E',
+                $scope: { person: "=person" },
+                template:
+                    "<section>" +
+                    "<h3>section personal data</h3>" +
+                    "<p>name: <em>{{ person.name }}</em></p>" +
+                    "<p>surname: <em>{{ person.surname }}</em></p>" +
+                    "</section>" +
+                    "<section>" +
+                    "<form name='personForm'>" +
+                    "<fieldset>" +
+                    "<legend>your name, please</legend>" +
+                    "<label for='name'>name: </label>" +
+                    "<input type='text' id='name' ng-model='person.name'/>" +
+                    "<label for='surname'> surname: </label>" +
+                    "<input type='text' id='surname' ng-model='person.surname'/>" +
+                    "</fieldset>" +
+                    "</form>" +
+                    "</section>"
+            }
         });
 })();
