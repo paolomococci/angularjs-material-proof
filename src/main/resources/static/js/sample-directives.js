@@ -53,5 +53,12 @@
                     "</form>" +
                     "</section>"
             }
+        })
+        .directive('pmUser', function() {
+            return {
+                restrict: 'E',
+                $scope: {user: "=user"},
+                templateUrl: '/html/elements/pm-user.html'
+            }
         });
 })();
