@@ -1,0 +1,20 @@
+
+<section id="dataAccount">
+    <h3>user account section</h3>
+    <div id="dataView">
+        <p>Welcome: <em>{{user.id}}</em></p>
+    </div>
+    <div id="dataForm">
+        <form id="userData">
+            <fieldset>
+                <legend>
+                    <img src="/img/icons/ic_person.svg"/>
+                </legend>
+                <label for="userId">user id: </label>
+                <input id="userId" ng-model="user.id" type="text"/>
+                <label for="userPassword"> password: </label>
+                <input id="userPassword" ng-model="user.pw" type="password"/>
+            </fieldset>
+        </form>
+    </div>
+</section>
