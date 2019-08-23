@@ -1,0 +1,17 @@
+
+<section>
+    <h3>section personal data</h3>
+    <p>name: <em>{{ person.name }}</em></p>
+    <p>surname: <em>{{ person.surname }}</em></p>
+</section>
+<section>
+    <form name='personForm'>
+        <fieldset>
+            <legend>your name, please</legend>
+            <label for='name'>name: </label>
+            <input id='name' ng-model='person.name' type='text'/>
+            <label for='surname'> surname: </label>
+            <input id='surname' ng-model='person.surname' type='text'/>
+        </fieldset>
+    </form>
+</section>
