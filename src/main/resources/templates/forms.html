@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>forms</title>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
+    <link href="/css/forms.css" media="all" rel="stylesheet">
+</head>
+<body ng-app="formsProof" ng-cloak>
+
+<div>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
+                <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>forms</h2>
+        </div>
+    </md-toolbar>
+</div>
+
+<div ng-controller="formsCtrl as ctrl">
+    <md-content>
+        <md-tabs class="md-primary" md-center-tabs>
+            <md-tab id="tabWeak">
+                <md-tab-label>
+                    <md-icon md-svg-src="/img/icons/ic_contacts.svg"></md-icon>
+                    <em>admins</em>
+                </md-tab-label>
+                <md-tab-body>
+                    <h3>admins</h3>
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tabNice">
+                <md-tab-label>
+                    <md-icon md-svg-src="/img/icons/ic_people.svg"></md-icon>
+                    <em>users</em>
+                </md-tab-label>
+                <md-tab-body>
+                    <h3>users</h3>
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tabStrong">
+                <md-tab-label>
+                    <md-icon md-svg-src="/img/icons/ic_work.svg"></md-icon>
+                    <em>employers</em>
+                </md-tab-label>
+                <md-tab-body>
+                    <h3>employers</h3>
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tabHardened">
+                <md-tab-label>
+                    <md-icon md-svg-src="/img/icons/ic_assignment.svg"></md-icon>
+                    <em>jobs</em>
+                </md-tab-label>
+                <md-tab-body>
+                    <h3>jobs</h3>
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>
+
+<script src="/webjars/angular/1.7.8/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-animate/1.7.8/angular-animate.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
+<script src="/js/forms.js" type="text/javascript"></script>
+</body>
+</html>
