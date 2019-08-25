@@ -25,6 +25,7 @@
 <div ng-controller="formsCtrl as ctrl">
     <md-content>
         <md-tabs class="md-primary" md-center-tabs>
+            <!-- admins -->
             <md-tab id="tabWeak">
                 <md-tab-label>
                     <md-icon md-svg-src="/img/icons/ic_contacts.svg"></md-icon>
@@ -32,8 +33,12 @@
                 </md-tab-label>
                 <md-tab-body>
                     <h3>admins</h3>
+                    <md-content layout-padding>
+                        <p ng-bind-html="adminHelp"></p>
+                    </md-content>
                 </md-tab-body>
             </md-tab>
+            <!-- users -->
             <md-tab id="tabNice">
                 <md-tab-label>
                     <md-icon md-svg-src="/img/icons/ic_people.svg"></md-icon>
@@ -41,17 +46,25 @@
                 </md-tab-label>
                 <md-tab-body>
                     <h3>users</h3>
+                    <md-content layout-padding>
+                        <p ng-bind-html="userHelp"></p>
+                    </md-content>
                 </md-tab-body>
             </md-tab>
+            <!-- employees -->
             <md-tab id="tabStrong">
                 <md-tab-label>
                     <md-icon md-svg-src="/img/icons/ic_work.svg"></md-icon>
-                    <em>employers</em>
+                    <em>employees</em>
                 </md-tab-label>
                 <md-tab-body>
-                    <h3>employers</h3>
+                    <h3>employees</h3>
+                    <md-content layout-padding>
+                        <p ng-bind-html="employeeHelp"></p>
+                    </md-content>
                 </md-tab-body>
             </md-tab>
+            <!-- jobs -->
             <md-tab id="tabHardened">
                 <md-tab-label>
                     <md-icon md-svg-src="/img/icons/ic_assignment.svg"></md-icon>
@@ -59,6 +72,9 @@
                 </md-tab-label>
                 <md-tab-body>
                     <h3>jobs</h3>
+                    <md-content layout-padding>
+                        <p ng-bind-html="jobHelp"></p>
+                    </md-content>
                 </md-tab-body>
             </md-tab>
         </md-tabs>
@@ -66,6 +82,7 @@
 </div>
 
 <script src="/webjars/angular/1.7.8/angular.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-sanitize/1.7.8/angular-sanitize.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-animate/1.7.8/angular-animate.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
