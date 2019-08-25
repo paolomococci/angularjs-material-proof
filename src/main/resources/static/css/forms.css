@@ -3,3 +3,11 @@ h3 {
     font-style: italic;
     color: #68c;
 }
+
+.included {
+    padding: 20px;
+}
+
+.help {
+    color: #876;
+}
