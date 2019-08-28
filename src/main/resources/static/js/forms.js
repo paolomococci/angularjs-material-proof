@@ -15,11 +15,28 @@
             $scope.admin = {
                 name: 'John',
                 surname: 'Do',
+                username: 'john.do',
                 email: 'john.do@acme.local',
                 id: '02574',
                 role: 'sysadmin',
                 company: 'acme',
                 department: 'rocket factory',
+                phone: '',
+                updated: ''
+            };
+            /* form nice */
+            $scope.user = {
+                name: 'Nike',
+                surname: 'Stay',
+                nickname: 'mariposa',
+                address: 'Champion\'s road, 123',
+                email: 'nike.stay@acme.local',
+                id: '10267',
+                role: 'user',
+                company: 'acme',
+                department: 'accounting',
+                phone: '0123456789',
+                liking: 0,
                 updated: ''
             };
     });
