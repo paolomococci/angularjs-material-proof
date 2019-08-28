@@ -11,3 +11,23 @@ h3 {
 .help {
     color: #876;
 }
+
+.name {
+    color: #4be;
+}
+
+.phone {
+    color: #928;
+}
+
+.email {
+    color: #8c4;
+}
+
+.address {
+    color: #888;
+}
+
+.liking {
+    color: #e35;
+}
