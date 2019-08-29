@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('formsProof', ['ngMaterial', 'ngSanitize'])
+    angular.module('formsProof', ['ngMaterial', 'ngSanitize', 'ngMessages'])
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('orange-dark')
                 .primaryPalette('orange')
@@ -8,8 +8,8 @@
         })
         .controller('formsCtrl', function($scope) {
             $scope.adminHelp = "<em class='help'>restricted area to admins</em>";
-            $scope.userHelp = "<em class='help'>area dedicated to common users</em>";
-            $scope.employeeHelp = "<em class='help'>employee shifts</em>";
+            $scope.employeeHelp = "<em class='help'>area dedicated to employees</em>";
+            $scope.projectHelp = "<em class='help'>planned projects</em>";
             $scope.jobHelp = "<em class='help'>planning of jobs</em>";
             /* form weak */
             $scope.admin = {
@@ -38,6 +38,15 @@
                 phone: '0123456789',
                 liking: 0,
                 updated: ''
+            };
+            /* form strong */
+            $scope.project = {
+                description: 'ice-creme factories network',
+                customer: 'ice-creme best factory inc.',
+                type: 'static',
+                email: 'best.ice-creme@ifn.local',
+                termsOfService: false,
+                helpDesk: false
             };
     });
 })();
