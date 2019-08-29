@@ -39,30 +39,30 @@
                     </md-content>
                 </md-tab-body>
             </md-tab>
-            <!-- users -->
+            <!-- employees -->
             <md-tab id="tabNice">
                 <md-tab-label>
                     <md-icon md-svg-src="/img/icons/ic_people.svg"></md-icon>
-                    <em>users</em>
-                </md-tab-label>
-                <md-tab-body>
-                    <h3>users</h3>
-                    <md-content layout-padding>
-                        <p ng-bind-html="userHelp"></p>
-                        <div ng-include class="included" src="'/html/templates/form-nice.html'"></div>
-                    </md-content>
-                </md-tab-body>
-            </md-tab>
-            <!-- employees -->
-            <md-tab id="tabStrong">
-                <md-tab-label>
-                    <md-icon md-svg-src="/img/icons/ic_work.svg"></md-icon>
                     <em>employees</em>
                 </md-tab-label>
                 <md-tab-body>
                     <h3>employees</h3>
                     <md-content layout-padding>
                         <p ng-bind-html="employeeHelp"></p>
+                        <div ng-include class="included" src="'/html/templates/form-nice.html'"></div>
+                    </md-content>
+                </md-tab-body>
+            </md-tab>
+            <!-- projects -->
+            <md-tab id="tabStrong">
+                <md-tab-label>
+                    <md-icon md-svg-src="/img/icons/ic_work.svg"></md-icon>
+                    <em>projects</em>
+                </md-tab-label>
+                <md-tab-body>
+                    <h3>projects</h3>
+                    <md-content layout-padding>
+                        <p ng-bind-html="projectHelp"></p>
                         <div ng-include class="included" src="'/html/templates/form-strong.html'"></div>
                     </md-content>
                 </md-tab-body>
