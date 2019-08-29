@@ -41,10 +41,10 @@
             };
             /* form strong */
             $scope.project = {
-                description: 'ice-creme factories network',
-                customer: 'ice-creme best factory inc.',
+                description: 'ice-cream factories network',
+                customer: 'ice-cream best factory inc.',
                 type: 'static',
-                email: 'best.ice-creme@ifn.local',
+                email: 'best.ice-cream@ifn.local',
                 termsOfService: false,
                 helpDesk: false
             };
