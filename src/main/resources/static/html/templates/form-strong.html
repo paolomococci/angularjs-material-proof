@@ -1,5 +1,58 @@
 <form id="strong">
     <fieldset>
         <legend>strong</legend>
+        <md-content layout-padding>
+
+            <md-input-container class="md-block">
+                <label>description</label>
+                <input md-maxlength="50"
+                       md-no-asterisk
+                       name="description"
+                       ng-model="project.description"
+                       required/>
+                <div ng-messages="strong.description.$error">
+                    <div ng-message="required">required field</div>
+                    <div ng-message="md-maxlength">the description must be less than 50 characters long</div>
+                </div>
+            </md-input-container>
+
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>customer</label>
+                    <input name="customer" ng-model="project.customer"
+                           required/>
+                    <div ng-messages="strong.customer.$error">
+                        <div ng-message="required">required field</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container flex="50">
+                    <label>project type</label>
+                    <md-select name="type"
+                               ng-model="project.type"
+                               required>
+                        <md-option value="static">static website</md-option>
+                        <md-option value="dynamic">web application</md-option>
+                        <md-option value="android">android application</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <md-input-container class="md-block">
+                <label>email</label>
+                <input maxlength="60"
+                       minlength="10"
+                       name="email"
+                       ng-model="project.email"
+                       ng-pattern="/^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/"
+                       required type="email"/>
+                <div ng-messages="strong.email.$error" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                        your email must be between 10 and 60 characters
+                    </div>
+                </div>
+            </md-input-container>
+
+        </md-content>
     </fieldset>
 </form>
