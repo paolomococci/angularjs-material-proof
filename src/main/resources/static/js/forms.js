@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('formsProof', ['ngMaterial', 'ngSanitize', 'ngMessages'])
+    angular.module('formsProof', ['ngMaterial', 'ngMessages', 'ngSanitize'])
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('orange-dark')
                 .primaryPalette('orange')
@@ -41,11 +41,11 @@
             };
             /* form strong */
             $scope.project = {
-                description: 'ice-cream factories network',
-                customer: 'ice-cream best factory inc.',
+                description: 'ice cream factories network',
+                customerName: 'Ice-Cream Best Factory Inc.',
                 type: 'static',
-                email: 'best.ice-cream@ifn.local',
-                termsOfService: false,
+                customerEmail: 'best.ice-cream@ifn.local',
+                termsOfService: true,
                 helpDesk: false
             };
     });
