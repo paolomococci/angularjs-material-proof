@@ -1,47 +1,51 @@
-<form id="weak">
-    <fieldset>
-        <legend>weak</legend>
-        <md-content layout-gt-sm="row" layout-paddin md-theme="orange-dark">
-            <div>
-                <md-input-container>
-                    <label>role</label>
-                    <input ng-model="admin.role"/>
-                </md-input-container>
-                <md-input-container>
-                    <label>email</label>
-                    <input ng-model="admin.email" type="email"/>
-                </md-input-container>
-                <md-input-container>
-                    <label>employee identifier number</label>
-                    <input aria-label="enter date" ng-model="admin.id"/>
-                </md-input-container>
-                <md-input-container>
-                    <label>updated</label>
-                    <md-datepicker aria-label="enter date" ng-model="user.updated"></md-datepicker>
-                </md-input-container>
-            </div>
-        </md-content>
-        <md-content layout-padding>
-            <div layout-gt-xs="row">
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>company (read only)</label>
-                    <input disabled ng-model="admin.company"/>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-xs>
-                    <label>department</label>
-                    <input ng-model="admin.department"/>
-                </md-input-container>
-            </div>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>name</label>
-                    <input ng-model="admin.name"/>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>surname</label>
-                    <input ng-model="admin.surname"/>
-                </md-input-container>
-            </div>
-        </md-content>
-    </fieldset>
-</form>
+<div ng-cloak>
+
+    <form id="weakForm">
+        <fieldset>
+            <legend>weak</legend>
+            <md-content layout-gt-sm="row" layout-paddin md-theme="orange-dark">
+                <div>
+                    <md-input-container>
+                        <label>role</label>
+                        <input ng-model="admin.role"/>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>email</label>
+                        <input ng-model="admin.email" type="email"/>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>employee identifier number</label>
+                        <input aria-label="enter date" ng-model="admin.id"/>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>updated</label>
+                        <md-datepicker aria-label="enter date" ng-model="user.updated"></md-datepicker>
+                    </md-input-container>
+                </div>
+            </md-content>
+            <md-content layout-padding>
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>company (read only)</label>
+                        <input disabled ng-model="admin.company"/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>department</label>
+                        <input ng-model="admin.department"/>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>name</label>
+                        <input ng-model="admin.name"/>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>surname</label>
+                        <input ng-model="admin.surname"/>
+                    </md-input-container>
+                </div>
+            </md-content>
+        </fieldset>
+    </form>
+
+</div>
