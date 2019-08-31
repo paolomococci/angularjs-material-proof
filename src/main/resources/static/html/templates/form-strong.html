@@ -1,58 +1,101 @@
-<form id="strong">
-    <fieldset>
-        <legend>strong</legend>
-        <md-content layout-padding>
+<div ng-cloak>
+
+    <form name="strongForm">
+        <fieldset>
+            <legend>strong</legend>
 
             <md-input-container class="md-block">
                 <label>description</label>
-                <input md-maxlength="50"
-                       md-no-asterisk
+                <input maxlength="80"
+                       minlength="20"
                        name="description"
                        ng-model="project.description"
-                       required/>
-                <div ng-messages="strong.description.$error">
-                    <div ng-message="required">required field</div>
-                    <div ng-message="md-maxlength">the description must be less than 50 characters long</div>
+                       ng-pattern="/^[\w\s]+$/"
+                       required>
+                <div ng-messages="strongForm.description.$error">
+                    <div ng-message-exp="['required', 'minlength']">
+                        describe the project with a minimum length of twenty characters, please
+                    </div>
+                    <div ng-message-exp="['pattern']">
+                        only alphanumeric characters and whitespace in this field, please
+                    </div>
                 </div>
             </md-input-container>
 
             <div layout="row">
                 <md-input-container flex="50">
-                    <label>customer</label>
-                    <input name="customer" ng-model="project.customer"
-                           required/>
-                    <div ng-messages="strong.customer.$error">
-                        <div ng-message="required">required field</div>
+                    <label>customer name</label>
+                    <input md-maxlength="80"
+                           name="customerName"
+                           ng-model="project.customerName"
+                           ng-pattern="/^[\w._-\s]+$/"
+                           required>
+                    <div ng-messages="strongForm.customerName.$error">
+                        <div ng-message="required">
+                            enter a name, please
+                        </div>
+                        <div ng-message="md-maxlength">
+                            less to eighty characters, please
+                        </div>
+                        <div ng-message="pattern">
+                            only alphanumeric characters, dots, dash and whitespace in this field, please
+                        </div>
                     </div>
                 </md-input-container>
 
                 <md-input-container flex="50">
                     <label>project type</label>
-                    <md-select name="type"
-                               ng-model="project.type"
-                               required>
-                        <md-option value="static">static website</md-option>
+                    <md-select name="type" ng-model="project.type" required>
+                        <md-option value="static">simple html website</md-option>
                         <md-option value="dynamic">web application</md-option>
+                        <md-option value="service">web service</md-option>
                         <md-option value="android">android application</md-option>
                     </md-select>
                 </md-input-container>
             </div>
 
             <md-input-container class="md-block">
-                <label>email</label>
-                <input maxlength="60"
+                <label>Client Email</label>
+                <input maxlength="100"
                        minlength="10"
-                       name="email"
-                       ng-model="project.email"
+                       name="customerEmail"
+                       ng-model="project.customerEmail"
                        ng-pattern="/^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/"
-                       required type="email"/>
-                <div ng-messages="strong.email.$error" role="alert">
-                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                        your email must be between 10 and 60 characters
+                       required
+                       type="email"/>
+
+                <div ng-messages="strongForm.customerEmail.$error" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                        your email must be between ten and one hundred characters long, please
+                    </div>
+                    <div ng-message-exp="['pattern']">
+                        your email is not compliant
                     </div>
                 </div>
             </md-input-container>
 
-        </md-content>
-    </fieldset>
-</form>
+            <md-input-container class="md-block">
+                <md-checkbox name="termsOfService" ng-model="project.termsOfService" required>
+                    i accept the terms of service
+                </md-checkbox>
+                <div md-auto-hide="false" multiple ng-messages="strongForm.termsOfService.$error">
+                    <div ng-message="required">
+                        you must accept the terms of service
+                    </div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <md-switch class="md-primary" name="helpDesk" ng-model="project.helpDesk">
+                    you want to enable the help desk option
+                </md-switch>
+            </md-input-container>
+
+            <div>
+                <md-button type="submit">proceed</md-button>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>
