@@ -1,59 +1,63 @@
-<form id="nice">
-    <fieldset>
-        <legend>nice</legend>
-        <md-content class="md-no-momentum">
-            <md-icon class="name" md-svg-src="/img/icons/ic_person.svg"></md-icon>
-            <md-input-container class="md-block">
-                <label>name</label>
-                <input aria-label="name" ng-model="user.name" placeholder="name" type="text"/>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>surname</label>
-                <input aria-label="surname"
-                       ng-model="user.surname"
-                       placeholder="surname"
-                       type="text"/>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>nickname</label>
-                <input aria-label="nickname"
-                       ng-model="user.nickname"
-                       placeholder="nickname"
-                       type="text"/>
-            </md-input-container>
-            <md-icon class="phone" md-svg-src="/img/icons/ic_phone.svg"></md-icon>
-            <md-input-container class="md-block" md-no-float>
-                <input aria-label="phone number"
-                       ng-model="user.phone"
-                       placeholder="phone"
-                       type="text"/>
-            </md-input-container>
-            <md-icon class="email" md-svg-src="/img/icons/ic_email.svg"></md-icon>
-            <md-input-container class="md-block">
-                <input aria-label="email (required)"
-                       ng-model="user.email"
-                       ng-required="true"
-                       placeholder="email (required)"
-                       type="email"/>
-            </md-input-container>
-            <md-icon class="address" md-svg-src="/img/icons/ic_place.svg"></md-icon>
-            <md-input-container class="md-block" md-no-float>
-                <input aria-label="address"
-                       ng-model="user.address"
-                       placeholder="address"
-                       type="text"/>
-            </md-input-container>
-            <md-icon class="liking" md-svg-src="/img/icons/ic_thumb_up.svg"></md-icon>
-            <md-input-container class="md-block">
-                <label>liking</label>
-                <input aria-label="liking"
-                       max="1"
-                       min="0"
-                       ng-model="user.liking"
-                       placeholder="liking"
-                       step="0.1"
-                       type="number"/>
-            </md-input-container>
-        </md-content>
-    </fieldset>
-</form>
+<div ng-cloak>
+
+    <form id="niceForm">
+        <fieldset>
+            <legend>nice</legend>
+            <md-content class="md-no-momentum">
+                <md-icon class="name" md-svg-src="/img/icons/ic_person.svg"></md-icon>
+                <md-input-container class="md-block">
+                    <label>name</label>
+                    <input aria-label="name" ng-model="user.name" placeholder="name" type="text"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>surname</label>
+                    <input aria-label="surname"
+                           ng-model="user.surname"
+                           placeholder="surname"
+                           type="text"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>nickname</label>
+                    <input aria-label="nickname"
+                           ng-model="user.nickname"
+                           placeholder="nickname"
+                           type="text"/>
+                </md-input-container>
+                <md-icon class="phone" md-svg-src="/img/icons/ic_phone.svg"></md-icon>
+                <md-input-container class="md-block" md-no-float>
+                    <input aria-label="phone number"
+                           ng-model="user.phone"
+                           placeholder="phone"
+                           type="text"/>
+                </md-input-container>
+                <md-icon class="email" md-svg-src="/img/icons/ic_email.svg"></md-icon>
+                <md-input-container class="md-block">
+                    <input aria-label="email (required)"
+                           ng-model="user.email"
+                           ng-required="true"
+                           placeholder="email (required)"
+                           type="email"/>
+                </md-input-container>
+                <md-icon class="address" md-svg-src="/img/icons/ic_place.svg"></md-icon>
+                <md-input-container class="md-block" md-no-float>
+                    <input aria-label="address"
+                           ng-model="user.address"
+                           placeholder="address"
+                           type="text"/>
+                </md-input-container>
+                <md-icon class="liking" md-svg-src="/img/icons/ic_thumb_up.svg"></md-icon>
+                <md-input-container class="md-block">
+                    <label>liking</label>
+                    <input aria-label="liking"
+                           max="1"
+                           min="0"
+                           ng-model="user.liking"
+                           placeholder="liking"
+                           step="0.1"
+                           type="number"/>
+                </md-input-container>
+            </md-content>
+        </fieldset>
+    </form>
+
+</div>
