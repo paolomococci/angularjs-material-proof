@@ -48,5 +48,13 @@
                 termsOfService: true,
                 helpDesk: false
             };
+            /* form hardened */
+            $scope.hintMode = true;
+            $scope.job = {
+                id: '',
+                line: '',
+                product: '',
+                status: ''
+            };
     });
 })();
