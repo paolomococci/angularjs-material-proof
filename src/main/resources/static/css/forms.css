@@ -31,3 +31,9 @@ h3 {
 .liking {
     color: #e35;
 }
+
+.hint {
+    font-size: 12px;
+    transition: all 0.1s;
+    color: #888;
+}
