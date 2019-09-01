@@ -3,6 +3,100 @@
     <form id="hardenedForm">
         <fieldset>
             <legend>hardened</legend>
+
+            <div layout-gt-sm="row">
+                <!-- job identifier -->
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>job id</label>
+                    <input md-maxlength="20"
+                           name="id"
+                           ng-model="job.id"
+                           ng-pattern="/^job[0-9]{17}$/"
+                           required/>
+
+                    <div class="hint" ng-if="hintMode">job#################</div>
+
+                    <div ng-if="!hintMode" ng-messages="hardenedForm.id.$error">
+                        <div ng-message="required">enter the job identification string, please</div>
+                        <div ng-message="md-maxlength">this field has to be exactly than twenty characters long</div>
+                        <div ng-message="pattern">
+                            job################# - job followed by seventeen numeric characters
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <div flex="5" hide-sm hide-xs></div>
+                <!--line identifier -->
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>line id</label>
+                    <input md-maxlength="12"
+                           name="line"
+                           ng-model="job.line"
+                           ng-pattern="/^line[0-9]{8}$/"
+                           required/>
+
+                    <div class="hint" ng-if="hintMode">line########</div>
+
+                    <div ng-if="!hintMode" ng-messages="hardenedForm.line.$error">
+                        <div ng-message="required">enter the line identification string, please</div>
+                        <div ng-message="md-maxlength">this field has to be exactly than twelve characters long</div>
+                        <div ng-message="pattern">line######## - line followed by eight numeric characters</div>
+                    </div>
+                </md-input-container>
+
+            </div>
+
+            <div layout-gt-sm="row">
+                <!-- product identifier -->
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>product id</label>
+                    <input md-maxlength="20"
+                           name="product"
+                           ng-model="job.product"
+                           ng-pattern="/^product[0-9]{13}$/"
+                           required/>
+
+                    <div class="hint" ng-show="hintMode">product#############</div>
+
+                    <div ng-hide="hintMode" ng-messages="hardenedForm.product.$error">
+                        <div ng-message-exp="['required', 'pattern']">
+                            product############# - product followed by thirteen numeric characters
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <div flex="5" hide-sm hide-xs></div>
+                <!-- status identifier -->
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>status</label>
+                    <md-select name="status" ng-model="job.status" required>
+                        <md-option value="expected">expected</md-option>
+                        <md-option value="confirmed">confirmed</md-option>
+                        <md-option value="appended">appended</md-option>
+                        <md-option value="initialized">initialized</md-option>
+                        <md-option value="started">started</md-option>
+                        <md-option value="processing">processing</md-option>
+                        <md-option value="accounted">accounted</md-option>
+                        <md-option value="revised">revised</md-option>
+                        <md-option value="invoiced">invoiced</md-option>
+                        <md-option value="shipped">shipped</md-option>
+                        <md-option value="delivered">delivered</md-option>
+                        <md-option value="cashed">cashed</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="space-between center" layout-sm="column" layout-xs="column">
+                <p>subfield mode</p>
+                <md-input-container>
+                    <md-switch ng-model="hintMode">{{hintMode ? "hints" : "errors"}}</md-switch>
+                </md-input-container>
+            </div>
+
+            <div>
+                <md-button type="submit">proceed</md-button>
+            </div>
+
         </fieldset>
     </form>
 
