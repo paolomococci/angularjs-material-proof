@@ -17,14 +17,34 @@
             <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
                 <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
             </md-button>
-            <h2 flex md-truncate>todo list</h2>
+            <h2 flex md-truncate>todo list - single page application</h2>
         </div>
     </md-toolbar>
 </div>
 
-<div ng-controller="todoListCtrl as ctrl">
+<div layout="row" ng-controller="todoListCtrl as ctrl">
+    <md-sidenav class="md-sidenav-left side-nav"
+                md-component-id="left"
+                md-disable-close-events
+                md-is-locked-open="true">
+        <md-button aria-label="root" class="" href="#!" ng-disabled="false" title="root">
+            <md-icon md-svg-src="/img/icons/ic_room.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="login" class="" href="#!/login" ng-disabled="false" title="login">
+            <md-icon md-svg-src="/img/icons/ic_person.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="photo" class="" href="#!/photo" ng-disabled="false" title="photo">
+            <md-icon md-svg-src="/img/icons/ic_photo.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="share" class="" href="#!/share" ng-disabled="false" title="share">
+            <md-icon md-svg-src="/img/icons/ic_share.svg"></md-icon>
+        </md-button>
+        <md-button aria-label="chat" class="" href="#!/chat" ng-disabled="false" title="chat">
+            <md-icon md-svg-src="/img/icons/ic_chat.svg"></md-icon>
+        </md-button>
+    </md-sidenav>
     <md-content layout-padding>
-
+        <div ng-view></div>
     </md-content>
 </div>
 
@@ -32,6 +52,7 @@
 <script src="/webjars/angular-animate/1.7.8/angular-animate.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-aria/1.7.5/angular-aria.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-messages/1.7.5/angular-messages.min.js" type="text/javascript"></script>
+<script src="/webjars/angular-route/1.7.8/angular-route.min.js" type="text/javascript"></script>
 <script src="/webjars/angular-material/1.1.5/angular-material.min.js" type="text/javascript"></script>
 <script src="/js/todo-list.js" type="text/javascript"></script>
 </body>
