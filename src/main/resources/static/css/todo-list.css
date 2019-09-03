@@ -1,1 +1,9 @@
+.side-nav {
+    width: 100px;
+    height: 900px;
+    background-color: #def;
+}
 
+h2 {
+    color: #aaa;
+}
