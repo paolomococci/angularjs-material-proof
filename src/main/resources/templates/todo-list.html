@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>todo list</title>
+    <title>todo lists</title>
     <meta content="" name="description"/>
     <meta content="Paolo Mococci" name="author"/>
     <link href="/webjars/angular-material/1.1.5/angular-material.min.css" media="all" rel="stylesheet">
@@ -17,7 +17,7 @@
             <md-button aria-label="home" class="md-fab md-primary" href="/" ng-disabled="false" title="back home">
                 <md-icon md-svg-src="/img/icons/ic_home.svg"></md-icon>
             </md-button>
-            <h2 flex md-truncate>todo list - single page application</h2>
+            <h2 flex md-truncate>todo lists</h2>
         </div>
     </md-toolbar>
 </div>
@@ -27,20 +27,17 @@
                 md-component-id="left"
                 md-disable-close-events
                 md-is-locked-open="true">
-        <md-button aria-label="root" class="" href="#!" ng-disabled="false" title="root">
+        <md-button aria-label="place" class="" href="#!/place" ng-disabled="false" title="place">
             <md-icon md-svg-src="/img/icons/ic_room.svg"></md-icon>
         </md-button>
-        <md-button aria-label="login" class="" href="#!/login" ng-disabled="false" title="login">
-            <md-icon md-svg-src="/img/icons/ic_person.svg"></md-icon>
+        <md-button aria-label="people" class="" href="#!/people" ng-disabled="false" title="people">
+            <md-icon md-svg-src="/img/icons/ic_people.svg"></md-icon>
         </md-button>
         <md-button aria-label="photo" class="" href="#!/photo" ng-disabled="false" title="photo">
             <md-icon md-svg-src="/img/icons/ic_photo.svg"></md-icon>
         </md-button>
         <md-button aria-label="share" class="" href="#!/share" ng-disabled="false" title="share">
             <md-icon md-svg-src="/img/icons/ic_share.svg"></md-icon>
-        </md-button>
-        <md-button aria-label="chat" class="" href="#!/chat" ng-disabled="false" title="chat">
-            <md-icon md-svg-src="/img/icons/ic_chat.svg"></md-icon>
         </md-button>
     </md-sidenav>
     <md-content layout-padding>
