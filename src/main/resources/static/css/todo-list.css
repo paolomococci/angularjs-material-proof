@@ -1,11 +1,15 @@
-.side-nav {
+.pm-side-nav {
     width: 100px;
     height: 900px;
     background-color: #def;
-    padding-left: 10px;
+    padding-left: 0.2em;
 }
 
-h2 {
+.pm-subtitle {
     color: #aaa;
     margin-left: 20px;
+}
+
+.pm-paragraph {
+    padding-right: 10px;
 }
