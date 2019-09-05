@@ -1,3 +1,19 @@
-<div ng-cloak>
-    <h2>place</h2>
+<div ng-controller="todoListCtrl" ng-cloak>
+    <md-content class="pm-subtitle">
+        <h2>place</h2>
+        <md-divider></md-divider>
+    </md-content>
+    <md-content>
+        <md-list flex>
+            <md-list-item class="md-3-line" ng-click="null" ng-repeat="place in listOfPlaces">
+                <div class="md-list-item-text" layout="row">
+                    <p class="pm-paragraph">{{ $index + 1 }}</p>
+                    <p class="pm-paragraph">{{ place.name }}</p>
+                    <p class="pm-paragraph">{{ place.whatToDo }}</p>
+                    <p class="pm-paragraph">{{ place.whenToDoIt }}</p>
+                    <p class="pm-paragraph">{{ place.notes }}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
 </div>
