@@ -11,7 +11,7 @@
                        name="description"
                        ng-model="project.description"
                        ng-pattern="/^[\w\s]+$/"
-                       required>
+                       required/>
                 <div ng-messages="strongForm.description.$error">
                     <div ng-message-exp="['required', 'minlength']">
                         describe the project with a minimum length of twenty characters, please
@@ -29,7 +29,7 @@
                            name="customerName"
                            ng-model="project.customerName"
                            ng-pattern="/^[\w._-\s]+$/"
-                           required>
+                           required/>
                     <div ng-messages="strongForm.customerName.$error">
                         <div ng-message="required">
                             enter a name, please
