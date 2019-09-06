@@ -9,7 +9,12 @@
                 .when('/share', {templateUrl: '/html/partials/todo-list-share.html'})
                 .otherwise({redirectTo: '/place'});
         })
-        .controller('todoListCtrl', function($scope) {
+        .service('addToList', function() {
+            this.add = function(temp) {
+                this.list.push(temp);
+            }
+        })
+        .controller('todoListCtrl', function($scope, addToList) {
             $scope.listOfPlaces = [
                 {
                     name: 'Chiang Rai, Thailand',
@@ -30,5 +35,8 @@
                     notes: "perhaps I will listen to live folk music"
                 }
             ];
+            $scope.addPlace = function() {
+                addToList.add();
+            }
     });
 })();
