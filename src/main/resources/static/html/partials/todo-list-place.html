@@ -1,7 +1,25 @@
-<div ng-controller="todoListCtrl" ng-cloak>
+<div ng-cloak ng-controller="todoListCtrl">
     <md-content class="pm-subtitle">
         <h2>place</h2>
         <md-divider></md-divider>
+    </md-content>
+    <md-content layout-padding>
+        <form class="pm-form" name="placeForm">
+            <fieldset>
+                <legend>adding a place</legend>
+                <div layout="row">
+                    <md-input-container class="md-block">
+                        <label>name</label>
+                        <input maxlength="30"
+                               minlength="10"
+                               name="name"
+                               ng-model="place.name"
+                               ng-pattern="/^[\w\s]+$/"
+                               required/>
+                    </md-input-container>
+                </div>
+            </fieldset>
+        </form>
     </md-content>
     <md-content>
         <md-list flex>
