@@ -12,7 +12,7 @@
                     <input md-maxlength="80"
                            name="name"
                            ng-model="place.name"
-                           ng-pattern="/^[a-zA-Z\s]+$/"
+                           ng-pattern="/^[a-z\s]+$/i"
                            required/>
                     <div ng-messages="placeForm.name.$error">
                         <div ng-message-exp="['required', 'maxlength']">
