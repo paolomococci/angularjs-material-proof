@@ -1,6 +1,10 @@
 (function () {
     'use strict';
-    angular.module('formsProof', ['ngMaterial', 'ngMessages', 'ngSanitize'])
+    angular.module('formsProof', [
+        'ngMaterial',
+        'ngMessages',
+        'ngSanitize'
+    ])
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('orange-dark')
                 .primaryPalette('orange')
