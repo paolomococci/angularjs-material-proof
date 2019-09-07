@@ -5,20 +5,25 @@
     </md-content>
     <md-content layout-padding>
         <form class="pm-form" name="placeForm">
-            <fieldset>
-                <legend>adding a place</legend>
-                <div layout="row">
-                    <md-input-container class="md-block">
-                        <label>name</label>
-                        <input maxlength="30"
-                               minlength="10"
-                               name="name"
-                               ng-model="place.name"
-                               ng-pattern="/^[\w\s]+$/"
-                               required/>
-                    </md-input-container>
-                </div>
-            </fieldset>
+            <legend>adding a place</legend>
+            <div layout="row">
+                <md-input-container class="md-block">
+                    <label>name</label>
+                    <input md-maxlength="80"
+                           name="name"
+                           ng-model="place.name"
+                           ng-pattern="/^[a-zA-Z\s]+$/"
+                           required/>
+                    <div ng-messages="placeForm.name.$error">
+                        <div ng-message-exp="['required', 'maxlength']">
+                            this field is mandatory with a maximum of eighty characters
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            only alphabetic characters and white spaces are allowed in this field
+                        </div>
+                    </div>
+                </md-input-container>
+            </div>
         </form>
     </md-content>
     <md-content>
@@ -27,6 +32,7 @@
                 <div class="md-list-item-text" layout="row">
                     <p class="pm-paragraph">{{ $index + 1 }}</p>
                     <p class="pm-paragraph">{{ place.name }}</p>
+                    <p class="pm-paragraph">{{ place.country }}</p>
                     <p class="pm-paragraph">{{ place.whatToDo }}</p>
                     <p class="pm-paragraph">{{ place.whenToDoIt }}</p>
                     <p class="pm-paragraph">{{ place.notes }}</p>
