@@ -23,6 +23,22 @@
                         </div>
                     </div>
                 </md-input-container>
+                <md-input-container class="md-block">
+                    <label>country</label>
+                    <input md-maxlength="20"
+                           name="country"
+                           ng-model="place.country"
+                           ng-pattern="/^[a-zA-Z\s]+$/"
+                           required/>
+                    <div ng-messages="placeForm.country.$error">
+                        <div ng-message-exp="['required', 'maxlength']">
+                            this field is mandatory with a maximum of twenty characters
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            only alphabetic characters and white spaces are allowed in this field
+                        </div>
+                    </div>
+                </md-input-container>
             </div>
         </form>
     </md-content>
