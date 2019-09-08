@@ -1,22 +1,22 @@
-<div ng-cloak ng-controller="todoListCtrl">
+<div ng-cloak ng-controller="placeCtrl">
     <md-content class="pm-subtitle">
         <h2>place</h2>
         <md-divider></md-divider>
     </md-content>
     <md-content layout-padding>
         <form class="pm-form" name="placeForm">
-            <legend>adding a place</legend>
+            <p>adding a place</p>
             <div layout="row">
                 <md-input-container class="md-block">
                     <label>name</label>
-                    <input md-maxlength="80"
+                    <input md-maxlength="40"
                            name="name"
                            ng-model="place.name"
-                           ng-pattern="/^[a-z\s]+$/i"
+                           ng-pattern="/^[a-zA-Z\s]+$/"
                            required/>
                     <div ng-messages="placeForm.name.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is mandatory with a maximum of eighty characters
+                            this field is mandatory with a maximum of forty characters
                         </div>
                         <div ng-message-exp="['pattern']">
                             only alphabetic characters and white spaces are allowed in this field
@@ -39,12 +39,63 @@
                         </div>
                     </div>
                 </md-input-container>
+                <md-input-container class="md-block">
+                    <label>what to do</label>
+                    <input md-maxlength="60"
+                           name="whatToDo"
+                           ng-model="place.whatToDo"
+                           ng-pattern="/^[a-z\s]+$/i"
+                           required/>
+                    <div ng-messages="placeForm.whatToDo.$error">
+                        <div ng-message-exp="['required', 'maxlength']">
+                            this field is mandatory with a maximum of sixty characters
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            only alphabetic characters and white spaces are allowed in this field
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>when to do it</label>
+                    <input md-maxlength="40"
+                           name="whenToDoIt"
+                           ng-model="place.whenToDoIt"
+                           ng-pattern=""
+                           required/>
+                    <div ng-messages="placeForm.whenToDoIt.$error">
+                        <div ng-message-exp="['required', 'maxlength']">
+                            this field is date and time
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            todo
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>notes</label>
+                    <input md-maxlength="60"
+                           name="notes"
+                           ng-model="place.notes"
+                           ng-pattern="/^[a-z\s]+$/i"
+                           required/>
+                    <div ng-messages="placeForm.notes.$error">
+                        <div ng-message-exp="['required', 'maxlength']">
+                            this field is mandatory with a maximum of sixty characters
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            only alphabetic characters and white spaces are allowed in this field
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-button aria-label="add place" class="md-fab" ng-click="addPlace()">
+                    <md-icon md-svg-src="/img/icons/ic_add_circle_outline.svg"></md-icon>
+                </md-button>
             </div>
         </form>
     </md-content>
     <md-content>
         <md-list flex>
-            <md-list-item class="md-3-line" ng-click="null" ng-repeat="place in listOfPlaces">
+            <md-list-item class="md-dense" ng-click="null" ng-repeat="place in listOfPlaces">
                 <div class="md-list-item-text" layout="row">
                     <p class="pm-paragraph">{{ $index + 1 }}</p>
                     <p class="pm-paragraph">{{ place.name }}</p>
