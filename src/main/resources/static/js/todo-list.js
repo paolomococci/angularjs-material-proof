@@ -21,7 +21,7 @@
         })
         .controller('placeCtrl', function($scope) {
             $scope.addPlace = function() {
-                $scope.listOfPlaces.push($scope.place)
+
             }
         })
         .controller('peopleCtrl', function($scope) {
@@ -31,12 +31,12 @@
         })
         .controller('photoCtrl', function($scope) {
             $scope.addPhoto = function() {
-                $scope.listOfPhotos.push($scope.photo)
+                
             }
         })
         .controller('shareCtrl', function($scope) {
             $scope.addShare = function() {
-                $scope.listOfShares.push($scope.share)
+                
             }
         });
 })();
