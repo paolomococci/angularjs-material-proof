@@ -60,14 +60,14 @@
                     <input md-maxlength="40"
                            name="whenToDoIt"
                            ng-model="place.whenToDoIt"
-                           ng-pattern=""
+                           ng-pattern="/^(\d{2}).(\d{2}).(\d{4})\s(\d{2}):(\d{2})/"
                            required/>
                     <div ng-messages="placeForm.whenToDoIt.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is date and time
+                            this field require mm.dd.yyyy hh:mm
                         </div>
                         <div ng-message-exp="['pattern']">
-                            todo
+                            mm.dd.yyyy hh:mm (in twenty-four hour format)
                         </div>
                     </div>
                 </md-input-container>
