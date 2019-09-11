@@ -15,13 +15,14 @@
                            ng-model="name"
                            ng-pattern="/^[a-zA-Z\s]+$/"
                            required/>
-                    <div ng-messages="personForm.name.$error">
+                    <div ng-messages="personForm.name.$error" role="alert">
                         <div ng-message-exp="['required', 'maxlength']">
                             this field is mandatory with a maximum of forty characters
                         </div>
                         <div ng-message-exp="['pattern']">
                             only alphabetic characters and white spaces are allowed in this field
                         </div>
+                        <div ng-message-default><em>an unexpected error occurred</em></div>
                     </div>
                 </md-input-container>
                 <md-button aria-label="add person" class="md-fab" ng-click="addPerson()">
