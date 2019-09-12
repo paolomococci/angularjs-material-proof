@@ -18,3 +18,9 @@
     background-color: #fff;
     padding: 10px;
 }
+
+.pm-error {
+    font-style: italic;
+    color: #fa3;
+    padding: 2px;
+}
