@@ -34,7 +34,8 @@
             $scope.addPerson = function() {
                 peopleService.addToList($scope.name);
                 $scope.name = '';
-                $scope.personForm.name.$error = false;
+                /* TypeError: "can't assign to property "required" on false: not an object" */
+                //$scope.personForm.name.$error = false;
             }
             $scope.listOfPeople = peopleService.list;
         })
