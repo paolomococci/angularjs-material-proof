@@ -15,7 +15,10 @@
         })
         .service('peopleService', function() {
                 this.list = [];
-                this.addToList = function(temp) {
+                this.addToList = function(person) {
+                var temp = {name: '', surname: ''}
+                temp.name = person.name;
+                temp.surname = person.surname;
                 this.list.push(temp);
             }
         })
@@ -32,8 +35,9 @@
         })
         .controller('peopleCtrl', function($scope, peopleService) {
             $scope.addPerson = function() {
-                peopleService.addToList($scope.name);
-                $scope.name = '';
+                peopleService.addToList($scope.person);
+                $scope.person.name = '';
+                $scope.person.surname = '';
                 /* TypeError: "can't assign to property "required" on false: not an object" */
                 //$scope.personForm.name.$error = false;
             }
