@@ -16,10 +16,14 @@
                            required/>
                     <div ng-messages="placeForm.name.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is mandatory with a maximum of forty characters
+                            <span class="pm-error">
+                                this field is mandatory with a maximum of forty characters
+                            </span>
                         </div>
                         <div ng-message-exp="['pattern']">
-                            only alphabetic characters and white spaces are allowed in this field
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
                         </div>
                     </div>
                 </md-input-container>
@@ -32,10 +36,14 @@
                            required/>
                     <div ng-messages="placeForm.country.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is mandatory with a maximum of twenty characters
+                            <span class="pm-error">
+                                this field is mandatory with a maximum of twenty characters
+                            </span>
                         </div>
                         <div ng-message-exp="['pattern']">
-                            only alphabetic characters and white spaces are allowed in this field
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
                         </div>
                     </div>
                 </md-input-container>
@@ -48,10 +56,14 @@
                            required/>
                     <div ng-messages="placeForm.whatToDo.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is mandatory with a maximum of sixty characters
+                            <span class="pm-error">
+                                this field is mandatory with a maximum of sixty characters
+                            </span>
                         </div>
                         <div ng-message-exp="['pattern']">
-                            only alphabetic characters and white spaces are allowed in this field
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
                         </div>
                     </div>
                 </md-input-container>
@@ -64,10 +76,14 @@
                            required/>
                     <div ng-messages="placeForm.whenToDoIt.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field require mm.dd.yyyy hh:mm
+                            <span class="pm-error">
+                                this field require mm.dd.yyyy hh:mm
+                            </span>
                         </div>
                         <div ng-message-exp="['pattern']">
-                            mm.dd.yyyy hh:mm (in twenty-four hour format)
+                            <span class="pm-error">
+                                mm.dd.yyyy hh:mm (in twenty-four hour format)
+                            </span>
                         </div>
                     </div>
                 </md-input-container>
@@ -80,10 +96,14 @@
                            required/>
                     <div ng-messages="placeForm.notes.$error">
                         <div ng-message-exp="['required', 'maxlength']">
-                            this field is mandatory with a maximum of sixty characters
+                            <span class="pm-error">
+                                this field is mandatory with a maximum of sixty characters
+                            </span>
                         </div>
                         <div ng-message-exp="['pattern']">
-                            only alphabetic characters and white spaces are allowed in this field
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
                         </div>
                     </div>
                 </md-input-container>
