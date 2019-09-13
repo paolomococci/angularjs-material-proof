@@ -10,15 +10,36 @@
             <div layout="row">
                 <md-input-container class="md-block">
                     <label>name</label>
-                    <input maxlength="40"
+                    <input maxlength="20"
                            name="name"
-                           ng-model="name"
+                           ng-model="person.name"
                            ng-pattern="/^[a-zA-Z\s]+$/"
                            required/>
                     <div ng-messages="personForm.name.$error" role="alert">
                         <div ng-message-exp="['required']">
                             <span class="pm-error">
-                                type a new item with a maximum of forty characters
+                                type a name with a maximum of twenty characters
+                            </span>
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
+                        </div>
+                        <div ng-message-default><span class="pm-error">an unexpected error occurred</span></div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>surname</label>
+                    <input maxlength="20"
+                           name="surname"
+                           ng-model="person.surname"
+                           ng-pattern="/^[a-zA-Z\s]+$/"
+                           required/>
+                    <div ng-messages="personForm.surname.$error" role="alert">
+                        <div ng-message-exp="['required']">
+                            <span class="pm-error">
+                                type a surname with a maximum of twenty characters
                             </span>
                         </div>
                         <div ng-message-exp="['pattern']">
@@ -40,10 +61,11 @@
 
     <md-content>
         <md-list flex>
-            <md-list-item class="md-dense" ng-click="null" ng-repeat="item in listOfPeople | orderBy">
+            <md-list-item class="md-dense" ng-click="null" ng-repeat="person in listOfPeople | orderBy">
                 <div class="md-list-item-text" layout="row">
                     <p class="pm-paragraph">{{ $index + 1 }}</p>
-                    <p class="pm-paragraph">{{ item }}</p>
+                    <p class="pm-paragraph">{{ person.name }}</p>
+                    <p class="pm-paragraph">{{ person.surname }}</p>
                 </div>
             </md-list-item>
         </md-list>
