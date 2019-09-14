@@ -61,7 +61,7 @@
 
     <md-content>
         <md-list flex>
-            <md-list-item class="md-dense" ng-click="null" ng-repeat="person in listOfPeople | orderBy">
+            <md-list-item ng-click="null" ng-repeat="person in listOfPeople | orderBy">
                 <div class="md-list-item-text" layout="row">
                     <p class="pm-paragraph">{{ $index + 1 }}</p>
                     <p class="pm-paragraph">{{ person.name }}</p>
