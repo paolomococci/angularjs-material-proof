@@ -25,7 +25,7 @@
                 };
                 temp.name = place.name;
                 temp.country = place.country;
-                temp.whatTodo = place.whatToDo;
+                temp.whatToDo = place.whatToDo;
                 temp.whenToDoIt = place.whenToDoIt;
                 temp.notes = place.notes;
                 this.places.push(temp);
@@ -37,6 +37,24 @@
                 var temp = {name: '', surname: ''}
                 temp.name = person.name;
                 temp.surname = person.surname;
+                this.list.push(temp);
+            }
+        })
+        .service('photoService', function() {
+            this.list = [];
+            this.addToList = function(photo) {
+                var temp = {id: '', name: ''}
+                temp.id = photo.id;
+                temp.name = photo.name;
+                this.list.push(temp);
+            }
+        })
+        .service('shareService', function() {
+            this.list = [];
+            this.addToList = function(share) {
+                var temp = {id: '', name: ''}
+                temp.id = share.id;
+                temp.name = share.name;
                 this.list.push(temp);
             }
         })
@@ -67,14 +85,20 @@
             }
             $scope.listOfPeople = peopleService.list;
         })
-        .controller('photoCtrl', function($scope) {
+        .controller('photoCtrl', function($scope, photoService) {
             $scope.addPhoto = function() {
-
+                photoService.addToList($scope.photo);
+                $scope.photo.id = '';
+                $scope.photo.name = '';
             }
+            $scope.listOfPhotos = photoService.list;
         })
-        .controller('shareCtrl', function($scope) {
+        .controller('shareCtrl', function($scope, shareService) {
             $scope.addShare = function() {
-
+                shareService.addToList($scope.share);
+                $scope.share.id = '';
+                $scope.share.name = '';
             }
+            $scope.listOfShares = shareService.list;
         });
 })();
