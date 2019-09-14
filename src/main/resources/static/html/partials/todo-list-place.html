@@ -115,7 +115,7 @@
     </md-content>
     <md-content>
         <md-list flex>
-            <md-list-item ng-click="null" ng-repeat="place in listOfPlaces">
+            <md-list-item ng-click="null" ng-repeat="place in listOfPlaces | orderBy:'country'">
                 <div class="md-list-item-text" layout="row">
                     <p class="pm-paragraph">{{ $index + 1 }}</p>
                     <p class="pm-paragraph">{{ place.name }}</p>
