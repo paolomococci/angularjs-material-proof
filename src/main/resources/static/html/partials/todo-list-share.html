@@ -3,4 +3,79 @@
         <h2>share</h2>
         <md-divider></md-divider>
     </md-content>
+
+    <md-content layout-padding>
+        <form class="pm-form" name="shareForm" novalidate>
+            <p>adding a name of share</p>
+            <div layout="row">
+                <md-input-container class="md-block">
+                    <label>id</label>
+                    <input maxlength="8"
+                           name="id"
+                           ng-model="share.id"
+                           ng-pattern="/^[\d]{8}$/"
+                           required/>
+                    <div ng-messages="shareForm.id.$error" role="alert">
+                        <div ng-message-exp="['required']">
+                            <span class="pm-error">
+                                required field
+                            </span>
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            <span class="pm-error">
+                                enter exactly eight numeric digits
+                            </span>
+                        </div>
+                        <div ng-message-default>
+                            <span class="pm-error">
+                                an unexpected error occurred
+                            </span>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>name</label>
+                    <input maxlength="20"
+                           name="name"
+                           ng-model="share.name"
+                           ng-pattern="/^[a-zA-Z\s]+$/"
+                           required/>
+                    <div ng-messages="shareForm.name.$error" role="alert">
+                        <div ng-message-exp="['required']">
+                            <span class="pm-error">
+                                type a name with a maximum of twenty characters
+                            </span>
+                        </div>
+                        <div ng-message-exp="['pattern']">
+                            <span class="pm-error">
+                                only alphabetic characters and white spaces are allowed in this field
+                            </span>
+                        </div>
+                        <div ng-message-default>
+                            <span class="pm-error">
+                                an unexpected error occurred
+                            </span>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-button aria-label="add name of share" class="md-fab" ng-click="addShare()">
+                    <md-icon md-svg-src="/img/icons/ic_add.svg"></md-icon>
+                </md-button>
+            </div>
+        </form>
+    </md-content>
+
+    <md-divider></md-divider>
+
+    <md-content>
+        <md-list flex>
+            <md-list-item ng-click="null" ng-repeat="share in listOfShares | orderBy:'id'">
+                <div class="md-list-item-text" layout="row">
+                    <p class="pm-paragraph">{{ share.id }}</p>
+                    <p class="pm-paragraph">{{ share.name }}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+
 </div>
