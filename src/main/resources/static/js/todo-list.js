@@ -34,7 +34,7 @@
         .service('peopleService', function() {
             this.list = [];
             this.addToList = function(person) {
-                var temp = {name: '', surname: ''}
+                var temp = {name: '', surname: ''};
                 temp.name = person.name;
                 temp.surname = person.surname;
                 this.list.push(temp);
@@ -43,7 +43,7 @@
         .service('photoService', function() {
             this.list = [];
             this.addToList = function(photo) {
-                var temp = {id: '', name: ''}
+                var temp = {id: '', name: ''};
                 temp.id = photo.id;
                 temp.name = photo.name;
                 this.list.push(temp);
@@ -52,7 +52,7 @@
         .service('shareService', function() {
             this.list = [];
             this.addToList = function(share) {
-                var temp = {id: '', name: ''}
+                var temp = {id: '', name: ''};
                 temp.id = share.id;
                 temp.name = share.name;
                 this.list.push(temp);
